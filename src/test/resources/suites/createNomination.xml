@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Chrome suite" verbose="1">
+
+    <test name="Create nomination Firefox">
+        <classes>
+            <class name="com.epam.tat.webdriver.CreateNominationTest"/>
+            <parameter name="browser" value="FIREFOX"></parameter>
+        </classes>
+    </test>
+    <test name="Create nomination Chrome">
+        <classes>
+            <class name="com.epam.tat.webdriver.CreateNominationTest"/>
+            <parameter name="browser" value="CHROME"></parameter>
+        </classes>
+    </test>
+    <!--<test name="Create nomination Edge">-->
+    <!--<classes>-->
+    <!--<class name="com.epam.tat.webdriver.CreateNominationTest"/>-->
+    <!--<parameter name="browser" value="EDGE" ></parameter>-->
+    <!--</classes>-->
+    <!--</test>-->
+</suite>
