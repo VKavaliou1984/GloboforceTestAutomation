@@ -5,26 +5,33 @@
         <parameter name="a" value="3"/>
         <parameter name="b" value="2"/>
         <!--<groups>-->
-            <!--<run>-->
-                <!--<include name="divisionByZeroException"/>-->
-            <!--</run>-->
+        <!--<run>-->
+        <!--<include name="divisionByZeroException"/>-->
+        <!--</run>-->
         <!--</groups>-->
         <classes>
-            <class name="DivisionLongTest">
-                <parameter name="result" value="1"/>
-                <methods>
-                    <exclude name="divisionByZeroException"/>
-                </methods>
-            </class>
-            <class name="MultiplicationLongTest">
-                <parameter name="result" value="6"/>
-            </class>
             <class name="SumLongTest">
-                    <parameter name="result" value="5"/>
+                <parameter name="result" value="5"/>
             </class>
-            <class name="SubstractionLongTest">
-                <parameter name="result" value="1"/>
+            <class name="SubtractionLongTest">
+                    <parameter name="result" value="1"/>
             </class>
+            <class name="MultiplicationLongTest"/>
+            <class name="DivisionLongTest"/>
         </classes>
-    </test> <!-- GloboforceTestAutomation -->
+    </test>
+    <test name="Double Values">
+        <parameter name="ad" value="3.5"/>
+        <parameter name="bd" value="2.15"/>
+        <classes>
+            <class name="SumDoubleTest">
+                <parameter name="result" value="5.65"/>
+            </class>
+            <class name="SubtractionDoubleTest">
+                <parameter name="result" value="1.35"/>
+            </class>
+            <class name="MultiplicationDoubleTest"/>
+            <class name="DivisionDoubleTest"/>
+        </classes>
+    </test>
 </suite> <!-- Default Suite -->
