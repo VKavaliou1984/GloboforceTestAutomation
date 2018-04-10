@@ -4,19 +4,22 @@ import org.testng.annotations.Test;
 
 public class NegativeLongValueCheck extends BaseTestClass {
 
-    @DataProvider(name = "Multiplication double test data")
-    public Object[][] divData() {
+    @DataProvider(name = "Negative numbers")
+    public Object[][] negData() {
         return new Object[][]{
-                {6.0, 2.5, 15.0},
-                {3.0, 0.0, 0.0},
-                {1.5,1.5,2.25},
-                {6.0,3.0,18.0}
+                {-6, true},
+                {0, false},
+                {1, false},
+                {"3", "false"}
         };
     }
 
-    @Test(description = "Multiplication function check", dataProvider = "Multiplication double test data")
-    public void multiplication(double a, double b, long result) {
-        double mult = calculator.mult(a,b);
-        Assert.assertEquals(mult, result, "Result of multiplication isn't correct");
+    @Test (description = "Negative number check", dataProvider = "Negative numbers")
+    public void negativeCheck (Object a, Object result) {
+        long al = Long.parseLong(String.valueOf(a));
+        boolean resultb = Boolean.parseBoolean(String.valueOf(result));
+        boolean neg = calculator.isNegative(al);
+        Assert.assertEquals(neg, resultb, "The number isn't negative");
     }
-    }
+}
+

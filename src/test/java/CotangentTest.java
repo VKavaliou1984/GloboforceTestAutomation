@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 public class CotangentTest extends BaseTestClass {
 
     @DataProvider(name = "Cotangent test data")
-    public Object[][] divData() {
+    public Object[][] ctgData() {
         return new Object[][]{
                 {Math.PI/4, 1},
                 {Math.PI/2, 0},
@@ -14,8 +14,10 @@ public class CotangentTest extends BaseTestClass {
     }
 
     @Test(description = "Cotangent function check", dataProvider = "Cotangent test data")
-    public void cotangent(double a, double result) {
-        double ctg = calculator.ctg(a);
-        Assert.assertEquals(ctg, result, "Cotangent of the number isn't correct");
+    public void cotangent(Object a, Object result) {
+        double ad = Double.parseDouble(String.valueOf(a));
+        double resultd = Double.parseDouble(String.valueOf(result));
+        double ctg = calculator.ctg(ad);
+        Assert.assertEquals(ctg, resultd, "Cotangent of the number isn't correct");
     }
 }
