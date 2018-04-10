@@ -22,10 +22,7 @@ public class PowTest extends BaseTestClass {
 
     @Test(description = "Pow function check", dataProvider = "Pow test data")
     public void pow(Object a, Object b, Object result) {
-        double ad = Double.parseDouble(String.valueOf(a));
-        double bd = Double.parseDouble(String.valueOf(b));
-        double resultd = Double.parseDouble(String.valueOf(result));
-        double pow = calculator.pow(ad,bd);
-        Assert.assertEquals(pow, resultd, "Result of pow isn't correct");
+        double pow = calculator.pow(getDouble(a), getDouble(b));
+        Assert.assertEquals(pow, getDouble(result), "Result of pow isn't correct");
     }
 }

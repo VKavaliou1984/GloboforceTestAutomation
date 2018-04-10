@@ -14,10 +14,9 @@ public class PositiveValueCheck extends BaseTestClass {
         };
     }
 
-        @Test (description = "Positive number check", dataProvider = "Positive numbers")
-        public void positiveCheck (Object a, Object result) {
-            long al = Long.parseLong(String.valueOf(a));
-            boolean pos = calculator.isPositive(al);
-            Assert.assertEquals(pos, result, "The number isn't positive");
-        }
+    @Test(description = "Positive number check", dataProvider = "Positive numbers")
+    public void positiveCheck(Object a, Object result) {
+        boolean pos = calculator.isPositive(getLong(a));
+        Assert.assertEquals(pos, result, "The number isn't positive");
     }
+}

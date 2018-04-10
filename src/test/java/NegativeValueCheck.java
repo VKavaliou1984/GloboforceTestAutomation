@@ -13,10 +13,9 @@ public class NegativeValueCheck extends BaseTestClass {
         };
     }
 
-    @Test (description = "Negative number check", dataProvider = "Negative numbers")
-    public void negativeCheck (Object a, Object result) {
-        long al = Long.parseLong(String.valueOf(a));
-        boolean neg = calculator.isNegative(al);
+    @Test(description = "Negative number check", dataProvider = "Negative numbers")
+    public void negativeCheck(Object a, Object result) {
+        boolean neg = calculator.isNegative(getLong(a));
         Assert.assertEquals(neg, result, "The number isn't negative");
     }
 }

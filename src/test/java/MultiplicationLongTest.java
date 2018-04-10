@@ -17,10 +17,7 @@ public class MultiplicationLongTest extends BaseTestClass {
 
     @Test(description = "Multiplication function check", dataProvider = "Multiplication test data")
     public void multiplication(Object a, Object b, Object result) {
-        long al = Long.parseLong(String.valueOf(a));
-        long bl = Long.parseLong(String.valueOf(b));
-        long resultl = Long.parseLong(String.valueOf(result));
-        long mult = calculator.mult(al,bl);
-        Assert.assertEquals(mult, resultl, "Result of multiplication isn't correct");
+        long mult = calculator.mult(getLong(a), getLong(b));
+        Assert.assertEquals(mult, getLong(result), "Result of multiplication isn't correct");
     }
 }

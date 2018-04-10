@@ -12,10 +12,20 @@ public class BaseTestClass {
     }
 
     @BeforeSuite
-    public void printStartInfoMessage ()
-    { System.out.println("Testing is in progress");}
+    public void printStartInfoMessage() {
+        System.out.println("Testing is in progress");
+    }
 
     @AfterSuite
-    public void printFinishInfoMessage ()
-    { System.out.println("Testing is finished");}
+    public void printFinishInfoMessage() {
+        System.out.println("Testing is finished");
+    }
+
+    double getDouble(Object object) {
+        return Double.parseDouble(String.valueOf(object));
+    }
+
+    long getLong(Object object) {
+        return Long.parseLong(String.valueOf(object));
+    }
 }
