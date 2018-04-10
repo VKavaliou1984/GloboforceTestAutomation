@@ -20,6 +20,6 @@ public class MultiplicationDoubleTest extends BaseTestClass {
         double bd = Double.parseDouble(String.valueOf(b));
         double resultd = Double.parseDouble(String.valueOf(result));
         double mult = calculator.mult(ad,bd);
-        Assert.assertEquals(mult, result, "Result of multiplication isn't correct");
+        Assert.assertEquals(mult, resultd, "Result of multiplication isn't correct");
     }
 }

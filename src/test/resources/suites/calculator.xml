@@ -45,4 +45,20 @@
             <class name="DivisionLongTest"/>
         </classes>
     </test>
+    <test name="Trigonometric functions">
+        <classes>
+            <class name="CosineTest"/>
+            <class name="SineTest"/>
+            <class name="TangentTest"/>
+            <class name="CotangentTest"/>
+        </classes>
+    </test>
+    <test name="Other functions">
+        <classes>
+            <class name="PowTest"/>
+            <class name="SqrtTest"/>
+            <class name="NegativeValueCheck"/>
+            <class name="PositiveValueCheck"/>
+        </classes>
+    </test>
 </suite>
