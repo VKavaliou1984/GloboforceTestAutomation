@@ -1,28 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Calculator Suite">
-    <test name="Long Values">
-        <parameter name="a" value="3"/>
-        <parameter name="b" value="2"/>
-        <!--<groups>-->
-        <!--<run>-->
-        <!--<include name="divisionByZeroException"/>-->
-        <!--</run>-->
-        <!--</groups>-->
-        <classes>
-            <class name="SumLongTest">
-                <parameter name="result" value="5"/>
-            </class>
-            <class name="SubtractionLongTest">
-                    <parameter name="result" value="1"/>
-            </class>
-            <class name="MultiplicationLongTest"/>
-            <class name="DivisionLongTest"/>
-        </classes>
-    </test>
+<suite name="Calculator Suite" parallel="methods" thread-count="2">
     <test name="Double Values">
         <parameter name="ad" value="3.5"/>
         <parameter name="bd" value="2.15"/>
+        <groups>
+            <run>
+                <exclude name="exception"/>
+            </run>
+        </groups>
         <classes>
             <class name="SumDoubleTest">
                 <parameter name="result" value="5.65"/>
@@ -34,4 +20,29 @@
             <class name="DivisionDoubleTest"/>
         </classes>
     </test>
-</suite> <!-- Default Suite -->
+    <test name="Long Values">
+        <parameter name="a" value="-3"/>
+        <parameter name="b" value="3"/>
+        <classes>
+            <class name="SumLongTest">
+                <parameter name="result" value="0"/>
+            </class>
+            <class name="SubtractionLongTest">
+                <parameter name="result" value="-6"/>
+            </class>
+            <class name="MultiplicationLongTest"/>
+            <class name="DivisionLongTest"/>
+        </classes>
+    </test>
+    <test name="Exceptions">
+        <groups>
+            <run>
+                <include name="exception"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="DivisionDoubleTest"/>
+            <class name="DivisionLongTest"/>
+        </classes>
+    </test>
+</suite>
