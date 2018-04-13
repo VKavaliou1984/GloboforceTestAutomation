@@ -1,3 +1,6 @@
+package com.epam.module2.trigonometrics;
+
+import com.epam.module2.BaseTestClass;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -15,7 +18,8 @@ public class CosineTest extends BaseTestClass {
         };
     }
 
-    @Test(description = "Cosine function check", dataProvider = "Cosine test data")
+    @Test(description = "Cosine function check",
+            dataProvider = "Cosine test data")
     public void cosine(Object a, Object result) {
         double cos = calculator.cos(getDouble(a));
         Assert.assertEquals(cos, getDouble(result), "Cosine of the number isn't correct");

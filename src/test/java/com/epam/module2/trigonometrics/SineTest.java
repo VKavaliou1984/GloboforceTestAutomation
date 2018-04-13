@@ -1,3 +1,6 @@
+package com.epam.module2.trigonometrics;
+
+import com.epam.module2.BaseTestClass;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -16,7 +19,8 @@ public class SineTest extends BaseTestClass {
         };
     }
 
-    @Test(description = "Sine function check", dataProvider = "Sine test data")
+    @Test(description = "Sine function check",
+            dataProvider = "Sine test data")
     public void sine(Object a, Object result) {
         double sin = calculator.sin(getDouble(a));
         Assert.assertEquals(sin, getDouble(result), "Sine of the number isn't correct");

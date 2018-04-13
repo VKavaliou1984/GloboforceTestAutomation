@@ -1,3 +1,6 @@
+package com.epam.module2.arithmetical;
+
+import com.epam.module2.BaseTestClass;
 import org.testng.Assert;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;

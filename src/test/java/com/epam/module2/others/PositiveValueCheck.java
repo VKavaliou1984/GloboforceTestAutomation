@@ -1,3 +1,6 @@
+package com.epam.module2.others;
+
+import com.epam.module2.BaseTestClass;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -14,7 +17,8 @@ public class PositiveValueCheck extends BaseTestClass {
         };
     }
 
-    @Test(description = "Positive number check", dataProvider = "Positive numbers")
+    @Test(description = "Positive number check",
+            dataProvider = "Positive numbers")
     public void positiveCheck(Object a, Object result) {
         boolean pos = calculator.isPositive(getLong(a));
         Assert.assertEquals(pos, result, "The number isn't positive");

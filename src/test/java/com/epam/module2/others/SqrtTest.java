@@ -1,3 +1,6 @@
+package com.epam.module2.others;
+
+import com.epam.module2.BaseTestClass;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -16,7 +19,8 @@ public class SqrtTest extends BaseTestClass {
         };
     }
 
-    @Test(description = "Square root of a number function check", dataProvider = "Square root test data")
+    @Test(description = "Square root of a number function check",
+            dataProvider = "Square root test data")
     public void sqrt(Object a, Object result) {
         double sqrt = calculator.sqrt(getDouble(a));
         Assert.assertEquals(sqrt, getDouble(result), "Square root of the number isn't correct");

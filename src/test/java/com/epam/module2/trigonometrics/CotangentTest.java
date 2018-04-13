@@ -1,3 +1,6 @@
+package com.epam.module2.trigonometrics;
+
+import com.epam.module2.BaseTestClass;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -13,7 +16,8 @@ public class CotangentTest extends BaseTestClass {
         };
     }
 
-    @Test(description = "Cotangent function check", dataProvider = "Cotangent test data")
+    @Test(description = "Cotangent function check",
+            dataProvider = "Cotangent test data")
     public void cotangent(Object a, Object result) {
         double ctg = calculator.ctg(getDouble(a));
         Assert.assertEquals(ctg, getDouble(result), "Cotangent of the number isn't correct");

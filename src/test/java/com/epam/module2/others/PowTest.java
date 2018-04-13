@@ -1,3 +1,6 @@
+package com.epam.module2.others;
+
+import com.epam.module2.BaseTestClass;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -20,7 +23,8 @@ public class PowTest extends BaseTestClass {
         };
     }
 
-    @Test(description = "Pow function check", dataProvider = "Pow test data")
+    @Test(description = "Pow function check",
+            dataProvider = "Pow test data")
     public void pow(Object a, Object b, Object result) {
         double pow = calculator.pow(getDouble(a), getDouble(b));
         Assert.assertEquals(pow, getDouble(result), "Result of pow isn't correct");

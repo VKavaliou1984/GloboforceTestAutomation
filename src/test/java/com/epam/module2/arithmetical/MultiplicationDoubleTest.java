@@ -1,3 +1,6 @@
+package com.epam.module2.arithmetical;
+
+import com.epam.module2.BaseTestClass;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -15,7 +18,8 @@ public class MultiplicationDoubleTest extends BaseTestClass {
         };
     }
 
-    @Test(description = "Multiplication double function check", dataProvider = "Multiplication double test data")
+    @Test(description = "Multiplication double function check",
+            dataProvider = "Multiplication double test data")
     public void checkFunction(Object a, Object b, Object result) {
         double mult = calculator.mult(getDouble(a), getDouble(b));
         Assert.assertEquals(mult, getDouble(result), "Result of multiplication isn't correct");

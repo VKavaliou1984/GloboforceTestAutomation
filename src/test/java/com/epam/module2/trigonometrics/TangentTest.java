@@ -1,3 +1,6 @@
+package com.epam.module2.trigonometrics;
+
+import com.epam.module2.BaseTestClass;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -16,7 +19,8 @@ public class TangentTest extends BaseTestClass {
         };
     }
 
-    @Test(description = "Tangent function check", dataProvider = "Tangent test data")
+    @Test(description = "Tangent function check",
+            dataProvider = "Tangent test data")
     public void tangent(Object a, Object result) {
         double tang = calculator.tg(getDouble(a));
         Assert.assertEquals(tang, getDouble(result), "Tangent of the number isn't correct");

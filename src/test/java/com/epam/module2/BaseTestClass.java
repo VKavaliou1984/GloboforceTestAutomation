@@ -1,3 +1,5 @@
+package com.epam.module2;
+
 import com.epam.tat.module4.Calculator;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
@@ -21,11 +23,11 @@ public class BaseTestClass {
         System.out.println("Testing is finished");
     }
 
-    double getDouble(Object object) {
+    protected double getDouble(Object object) {
         return Double.parseDouble(String.valueOf(object));
     }
 
-    long getLong(Object object) {
+    protected long getLong(Object object) {
         return Long.parseLong(String.valueOf(object));
     }
 }

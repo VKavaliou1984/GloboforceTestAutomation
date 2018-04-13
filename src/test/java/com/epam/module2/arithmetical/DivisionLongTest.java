@@ -1,3 +1,6 @@
+package com.epam.module2.arithmetical;
+
+import com.epam.module2.BaseTestClass;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -30,7 +33,11 @@ public class DivisionLongTest extends BaseTestClass {
     }
 
 
-    @Test(description = "Division by zero check", expectedExceptions = NumberFormatException.class, expectedExceptionsMessageRegExp = "Attempt to divide by zero", dataProvider = "Division exception test data", groups = "exception")
+    @Test(description = "Division by zero check",
+            expectedExceptions = NumberFormatException.class,
+            expectedExceptionsMessageRegExp = "Attempt to divide by zero",
+            dataProvider = "Division exception test data",
+            groups = "exception")
     public void divisionByZeroException(Object a, Object b) {
         calculator.div(getLong(a), getLong(b));
     }

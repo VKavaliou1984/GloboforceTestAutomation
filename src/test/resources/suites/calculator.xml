@@ -10,28 +10,28 @@
             </run>
         </groups>
         <classes>
-            <class name="SumDoubleTest">
+            <class name="com.epam.module2.arithmetical.SumDoubleTest">
                 <parameter name="result" value="5.65"/>
             </class>
-            <class name="SubtractionDoubleTest">
+            <class name="com.epam.module2.arithmetical.SubtractionDoubleTest">
                 <parameter name="result" value="1.35"/>
             </class>
-            <class name="MultiplicationDoubleTest"/>
-            <class name="DivisionDoubleTest"/>
+            <class name="com.epam.module2.arithmetical.MultiplicationDoubleTest"/>
+            <class name="com.epam.module2.arithmetical.DivisionDoubleTest"/>
         </classes>
     </test>
     <test name="Basic arithmetical functions. Long Inputs">
         <parameter name="a" value="-3"/>
         <parameter name="b" value="3"/>
         <classes>
-            <class name="SumLongTest">
+            <class name="com.epam.module2.arithmetical.SumLongTest">
                 <parameter name="result" value="0"/>
             </class>
-            <class name="SubtractionLongTest">
+            <class name="com.epam.module2.arithmetical.SubtractionLongTest">
                 <parameter name="result" value="-6"/>
             </class>
-            <class name="MultiplicationLongTest"/>
-            <class name="DivisionLongTest"/>
+            <class name="com.epam.module2.arithmetical.MultiplicationLongTest"/>
+            <class name="com.epam.module2.arithmetical.DivisionLongTest"/>
         </classes>
     </test>
     <test name="Exceptions">
@@ -41,24 +41,24 @@
             </run>
         </groups>
         <classes>
-            <class name="DivisionDoubleTest"/>
-            <class name="DivisionLongTest"/>
+            <class name="com.epam.module2.arithmetical.DivisionDoubleTest"/>
+            <class name="com.epam.module2.arithmetical.DivisionLongTest"/>
         </classes>
     </test>
     <test name="Trigonometric functions">
         <classes>
-            <class name="CosineTest"/>
-            <class name="SineTest"/>
-            <class name="TangentTest"/>
-            <class name="CotangentTest"/>
+            <class name="com.epam.module2.trigonometrics.CosineTest"/>
+            <class name="com.epam.module2.trigonometrics.SineTest"/>
+            <class name="com.epam.module2.trigonometrics.TangentTest"/>
+            <class name="com.epam.module2.trigonometrics.CotangentTest"/>
         </classes>
     </test>
     <test name="Other functions">
         <classes>
-            <class name="PowTest"/>
-            <class name="SqrtTest"/>
-            <class name="NegativeValueCheck"/>
-            <class name="PositiveValueCheck"/>
+            <class name="com.epam.module2.others.PowTest"/>
+            <class name="com.epam.module2.others.SqrtTest"/>
+            <class name="com.epam.module2.others.NegativeValueCheck"/>
+            <class name="com.epam.module2.others.PositiveValueCheck"/>
         </classes>
     </test>
 </suite>
