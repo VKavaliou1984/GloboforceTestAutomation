@@ -1,3 +1,6 @@
+package com.epam.module2.arithmetical;
+
+import com.epam.module2.BaseTestClass;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -26,7 +29,8 @@ public class DivisionDoubleTest extends BaseTestClass {
         };
     }
 
-    @Test(description = "Division double function check", dataProvider = "Division double test data")
+    @Test(description = "Division double function check",
+            dataProvider = "Division double test data")
     public void divisionDouble(Object a, Object b, Object result) {
         double divDouble = calculator.div(getDouble(a), getDouble(b));
         Assert.assertEquals(divDouble, getDouble(result), "Result of division isn't correct");
@@ -35,7 +39,11 @@ public class DivisionDoubleTest extends BaseTestClass {
     /**
      * There is no the no division by zero check for double
      */
-    @Test(description = "Division by zero check", expectedExceptions = NumberFormatException.class, expectedExceptionsMessageRegExp = "Attempt to divide by zero", dataProvider = "Division double exception test data", groups = "exception")
+    @Test(description = "Division by zero check",
+            expectedExceptions = NumberFormatException.class,
+            expectedExceptionsMessageRegExp = "Attempt to divide by zero",
+            dataProvider = "Division double exception test data",
+            groups = "exception")
     public void divisionByZeroException(Object a, Object b) {
         calculator.div(getDouble(a), getDouble(b));
     }
