@@ -1,21 +1,14 @@
-import com.epam.tat.module4.Calculator;
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-public class SumLongTest {
-    private Calculator calculator;
+public class SumLongTest extends BaseTestClass {
 
-    @BeforeClass(alwaysRun = true)
-    public void initCalculator() {
-        calculator = new Calculator();
-    }
-
-        @Test(description = "Sum function check")
-        @Parameters({"a","b","result"})
-        public void sum(long a, long b, long result) {
-        long sum = calculator.sum(a,b);
-        Assert.assertEquals(sum, result, "Result of sum is correct");
+    @Test(description = "Sum function check")
+    @Parameters({"a", "b", "result"})
+    public void sum(@Optional("2") long a, @Optional("-2") long b, @Optional("0") long result) {
+        long sum = calculator.sum(a, b);
+        Assert.assertEquals(sum, result, "Result of sum isn't correct");
     }
 }
