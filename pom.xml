@@ -15,17 +15,19 @@
             <version>6.8</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>calculator</groupId>
+            <artifactId>calculator-1.0</artifactId>
+            <version>v1</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/calculator/calculator-1.0.jar</systemPath>
+        </dependency>
     </dependencies>
-    <!--<repositories>-->
-        <!--<id>in-project</id>-->
-        <!--<name>In Project Repo</name>-->
-        <!--<url>file://${project.basedir}/libs</url>-->
-    <!--</repositories>-->
-    <!--<dependency>-->
-        <!--<groupId>calculator</groupId>-->
-        <!--<artifactId>calculator-1.0</artifactId>-->
-        <!--<version>v1</version>-->
-        <!--<scope>system</scope>-->
-        <!--<systemPath>${project.basedir}/libs/calculator/calculator-1.0.jar</systemPath>-->
-    <!--</dependency>-->
+    <repositories>
+        <repository>
+            <id>in-project</id>
+            <name>In Project Repo</name>
+            <url>file://${project.basedir}/libs</url>
+        </repository>
+    </repositories>
 </project>
