@@ -15,13 +15,13 @@
             <version>6.8</version>
             <scope>test</scope>
         </dependency>
-        <!--<dependency>-->
-            <!--<groupId>calculator</groupId>-->
-            <!--<artifactId>calculator-1.0</artifactId>-->
-            <!--<version>v1</version>-->
-            <!--&lt;!&ndash;<scope>system</scope>&ndash;&gt;-->
-            <!--<systemPath>${project.basedir}/libs/calculator/calculator-1.0.jar</systemPath>-->
-        <!--</dependency>-->
+        <dependency>
+        <groupId>calculator</groupId>
+        <artifactId>calculator-1.0</artifactId>
+        <version>v1</version>
+        <scope>system</scope>
+        <systemPath>${project.basedir}/libs/calculator/calculator-1.0.jar</systemPath>
+    </dependency>
     </dependencies>
     <repositories>
         <repository>
