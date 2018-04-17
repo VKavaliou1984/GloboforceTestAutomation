@@ -19,7 +19,7 @@
             <groupId>calculator</groupId>
             <artifactId>calculator-1.0</artifactId>
             <version>v1</version>
-            <scope>system</scope>
+            <!--<scope>system</scope>-->
             <systemPath>${project.basedir}/libs/calculator/calculator-1.0.jar</systemPath>
         </dependency>
     </dependencies>
