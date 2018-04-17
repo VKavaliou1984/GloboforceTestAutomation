@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Calculator Suite" parallel="methods" thread-count="2">
-    <test name="Basic arithmetical functions. Double Inputs">
+    <test name="Basic arithmetical functions Double Inputs">
         <parameter name="ad" value="3.5"/>
         <parameter name="bd" value="2.15"/>
         <groups>
@@ -20,7 +20,7 @@
             <class name="com.epam.module2.arithmetical.DivisionDoubleTest"/>
         </classes>
     </test>
-    <test name="Basic arithmetical functions. Long Inputs">
+    <test name="Basic arithmetical functions Long Inputs">
         <parameter name="a" value="-3"/>
         <parameter name="b" value="3"/>
         <classes>
