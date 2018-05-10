@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 
 import static com.epam.tat.webdriver.Service.Waiters.waitElementDisplayed;
 
-public abstract class Nomination extends BasePage {
+public abstract class NominationPage extends BasePage {
 
     private By nominationPopUpBy = By.id("np_mainNotification");
 

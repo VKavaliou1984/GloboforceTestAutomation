@@ -12,11 +12,10 @@ public class WebDriverInitializator {
 
     private WebDriver driver;
     private static final int IMPLICIT_TIMEOUT = 5;
+    private static WebDriverInitializator webDriverInitializator = null;
 
     private WebDriverInitializator() {
     }
-
-    private static WebDriverInitializator webDriverInitializator = null;
 
     public static WebDriverInitializator getInstance() {
         if (webDriverInitializator == null) {

@@ -7,14 +7,14 @@ import static com.epam.tat.webdriver.Service.Waiters.waitElementClickable;
 
 public class LoginPage extends BasePage {
 
+    private By userNameInputBy = By.name("username");
+    private By passwordInputBy = By.name("password");
+    private By signInButtonBy = By.id("signIn-button");
+
     public LoginPage open(String URL, String server, String clientName) {
         driver.navigate().to(String.format(URL, server, clientName));
         return this;
     }
-
-    private By userNameInputBy = By.name("username");
-    private By passwordInputBy = By.name("password");
-    private By signInButtonBy = By.id("signIn-button");
 
     public LoginPage enterUserName(String userName) {
         InputFieldFilling.fillInputField(driver, userNameInputBy, userName);

@@ -1,11 +1,11 @@
 package com.epam.tat.webdriver.pages.nomination.process;
 
-import com.epam.tat.webdriver.pages.Nomination;
+import com.epam.tat.webdriver.pages.NominationPage;
 import org.openqa.selenium.By;
 
 import static com.epam.tat.webdriver.Service.Waiters.waitElementClickable;
 
-public class ReasonsPage extends Nomination {
+public class ReasonsPage extends NominationPage {
 
     private By awardReasonButtonBy = new By.ByXPath("//div[contains(@class,'np-award-reason-item')]");
 

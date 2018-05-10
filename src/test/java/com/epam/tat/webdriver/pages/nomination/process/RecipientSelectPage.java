@@ -1,7 +1,7 @@
 package com.epam.tat.webdriver.pages.nomination.process;
 
 import com.epam.tat.webdriver.Service.InputFieldFilling;
-import com.epam.tat.webdriver.pages.Nomination;
+import com.epam.tat.webdriver.pages.NominationPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -10,7 +10,7 @@ import java.util.List;
 import static com.epam.tat.webdriver.Service.Waiters.waitElementClickable;
 import static com.epam.tat.webdriver.Service.Waiters.waitElementDisplayed;
 
-public class RecipientSelectPage extends Nomination {
+public class RecipientSelectPage extends NominationPage {
 
     private By searchRecipientFieldBy = By.id("np-recipient-search-field");
     private By chooseRecipientButtonBy = By.cssSelector(".np-recipient-action");

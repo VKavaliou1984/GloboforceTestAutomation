@@ -1,4 +1,4 @@
-package com.epam.tat.webdriver;
+package com.epam.tat.webdriver.scenarios;
 
 import com.epam.tat.webdriver.Service.Driver.BrowserType;
 import com.epam.tat.webdriver.Service.Driver.WebDriverInitializator;
@@ -12,7 +12,7 @@ public class CreateNominationTest {
     private static final String CLIENT_NAME = "testclient5015";
     private static final String USER_NAME = "adam_admin";
     private static final String PASSWORD = "password1";
-    private static final String SERVER = "staging-web1.corp.globoforce.com"; //"psupport-web1.corp.globoforce.com"; //preprod-sandbox0.corp.globoforce.com //sandbox0.globoforce.com //psupport-sandbox0.corp.globoforce.com //psupport-web1.corp.globoforce.com
+    private static final String SERVER = "psupport-web1.corp.globoforce.com"; //"psupport-web1.corp.globoforce.com"; //preprod-sandbox0.corp.globoforce.com //sandbox0.globoforce.com //psupport-sandbox0.corp.globoforce.com //psupport-web1.corp.globoforce.com
     private static final String RECIPIENT = "Helen HR_Manager";
     private static final String AWARD_TITLE = "Auto_test_vk_award_test_title";
     private static final String AWARD_MESSAGE = "Auto_test_vk_award_test_message";
@@ -20,8 +20,11 @@ public class CreateNominationTest {
 
     @BeforeClass
     @Parameters({"browser"})
-    public void initializeDriver(@Optional("FIREFOX") BrowserType browser) {
-        WebDriverInitializator.getInstance().startDriver(browser);
+    public void initializeDriver(@Optional("CHROME") BrowserType browser) {
+        System.out.println("Browser in use: ".concat(browser.toString()));
+        WebDriverInitializator.
+                getInstance().
+                startDriver(browser);
     }
 
     @Test(description = "Create nomination Test")
