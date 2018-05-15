@@ -1,4 +1,4 @@
-package com.epam.tat.webdriver.Service.Driver;
+package com.epam.tat.webdriver.service.driver;
 
 public enum BrowserType {
     CHROME,

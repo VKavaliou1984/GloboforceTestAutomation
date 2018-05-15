@@ -4,7 +4,7 @@ import com.epam.tat.webdriver.pages.BasePage;
 import com.epam.tat.webdriver.pages.LogOutPage;
 import org.openqa.selenium.By;
 
-import static com.epam.tat.webdriver.Service.Waiters.waitElementClickable;
+import static com.epam.tat.webdriver.service.Waiters.waitElementClickable;
 
 public class HeaderBlock extends BasePage {
 

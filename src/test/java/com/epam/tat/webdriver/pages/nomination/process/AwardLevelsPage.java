@@ -3,7 +3,7 @@ package com.epam.tat.webdriver.pages.nomination.process;
 import com.epam.tat.webdriver.pages.NominationPage;
 import org.openqa.selenium.By;
 
-import static com.epam.tat.webdriver.Service.Waiters.waitElementClickable;
+import static com.epam.tat.webdriver.service.Waiters.waitElementClickable;
 
 public class AwardLevelsPage extends NominationPage {
 

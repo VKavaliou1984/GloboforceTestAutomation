@@ -1,4 +1,4 @@
-package com.epam.tat.webdriver.Service;
+package com.epam.tat.webdriver.service;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.StaleElementReferenceException;

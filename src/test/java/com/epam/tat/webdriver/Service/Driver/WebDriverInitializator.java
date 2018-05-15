@@ -1,4 +1,4 @@
-package com.epam.tat.webdriver.Service.Driver;
+package com.epam.tat.webdriver.service.driver;
 
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;

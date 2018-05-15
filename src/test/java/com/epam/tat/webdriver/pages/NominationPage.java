@@ -2,7 +2,7 @@ package com.epam.tat.webdriver.pages;
 
 import org.openqa.selenium.By;
 
-import static com.epam.tat.webdriver.Service.Waiters.waitElementDisplayed;
+import static com.epam.tat.webdriver.service.Waiters.waitElementDisplayed;
 
 public abstract class NominationPage extends BasePage {
 
