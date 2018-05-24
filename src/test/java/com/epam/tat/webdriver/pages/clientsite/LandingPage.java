@@ -1,6 +1,7 @@
-package com.epam.tat.webdriver.pages;
+package com.epam.tat.webdriver.pages.clientsite;
 
-import com.epam.tat.webdriver.pages.nomination.process.RecipientSelectPage;
+import com.epam.tat.webdriver.pages.BasePage;
+import com.epam.tat.webdriver.pages.clientsite.nomination.RecipientSelectPage;
 import org.openqa.selenium.support.FindBy;
 import ru.yandex.qatools.htmlelements.annotations.Name;
 import ru.yandex.qatools.htmlelements.element.Button;

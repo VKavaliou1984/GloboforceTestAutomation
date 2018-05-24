@@ -1,6 +1,5 @@
-package com.epam.tat.webdriver.pages.nomination.process;
+package com.epam.tat.webdriver.pages.clientsite.nomination;
 
-import com.epam.tat.webdriver.pages.NominationPage;
 import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

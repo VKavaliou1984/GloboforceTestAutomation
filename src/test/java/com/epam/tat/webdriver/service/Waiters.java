@@ -11,14 +11,14 @@ import java.time.Duration;
 public class Waiters {
 
     public static WebElement waitElementClickable(WebDriver driver, WebElement webElement) {
-        return new WebDriverWait(driver, 5)
+        return new WebDriverWait(driver, 10)
                 .ignoring(StaleElementReferenceException.class)
                 .pollingEvery(Duration.ofSeconds(1))
                 .until(ExpectedConditions.elementToBeClickable(webElement));
     }
 
     public static WebElement waitElementDisplayed(WebDriver driver, WebElement webElement) {
-        return new WebDriverWait(driver, 5)
+        return new WebDriverWait(driver, 10)
                 .ignoring(StaleElementReferenceException.class)
                 .pollingEvery(Duration.ofSeconds(1))
                 .until(ExpectedConditions.visibilityOf(webElement));

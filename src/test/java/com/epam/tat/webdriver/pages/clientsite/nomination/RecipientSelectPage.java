@@ -1,6 +1,5 @@
-package com.epam.tat.webdriver.pages.nomination.process;
+package com.epam.tat.webdriver.pages.clientsite.nomination;
 
-import com.epam.tat.webdriver.pages.NominationPage;
 import com.epam.tat.webdriver.service.InputFieldFilling;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;

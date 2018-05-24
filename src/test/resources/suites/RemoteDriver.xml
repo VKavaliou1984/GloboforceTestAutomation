@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Remote Driver Test suite" verbose="1">
+
+    <test name="Remote Driver Test Firefox">
+        <classes>
+            <class name="com.epam.tat.webdriver.scenarios.RemoteDriverTest"/>
+            <parameter name="browser" value="chrome"></parameter>
+            <parameter name="platform" value="WINDOWS"></parameter>
+            <parameter name="driverType" value="remote"></parameter>
+        </classes>
+    </test>
+</suite>
