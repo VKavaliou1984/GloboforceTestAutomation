@@ -15,11 +15,11 @@ import static com.epam.tat.webdriver.service.Waiters.waitElementClickable;
 public class AwardReasonsPage extends NominationPage {
 
     @Name("Award reason button")
-    @FindBy(xpath = "//div[contains(@class,'np-award-reason-item')]")
+    @FindBy(xpath = "//div[contains(@class,'np-awards-reason-item')]")
     private Button awardReasonButton;
 
     @Name("Award reason description button")
-    @FindBy(xpath = "//div[contains(@class,'np-award-reason-description')]")
+    @FindBy(xpath = "//div[contains(@class,'np-awards-reason-description')]")
     private List<HtmlElement> awardReasonDescriptionButtons;
 
     public AwardLevelsPage chooseAwardReason() {

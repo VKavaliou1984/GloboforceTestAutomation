@@ -23,7 +23,7 @@ public class AwardDetailsPage extends NominationPage {
     private TextInput messageForApprovalInput;
 
     @Name("Submit nomination button")
-    @FindBy(xpath = "//button[contains(@class,'js-np-send-award')]")
+    @FindBy(xpath = "//button[contains(@class,'js-np-send-awards')]")
     private Button submitNominationButton;
 
     private Boolean isAwardMessageInputDisplayed() {

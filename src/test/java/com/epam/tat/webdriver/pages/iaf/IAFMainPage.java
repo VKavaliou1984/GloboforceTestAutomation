@@ -35,8 +35,8 @@ public class IAFMainPage extends BasePage {
         return new ConfigAppMainPage();
     }
 
-    public IAFLoginPage clickSignOutButton() {
+    public void clickSignOutButton() {
+        driver.navigate().refresh();
         waitElementClickable(driver, iafSignOutButton).click();
-        return new IAFLoginPage();
     }
 }

@@ -1,7 +1,8 @@
-package com.epam.tat.webdriver.pages.iaf.configapp;
+package com.epam.tat.webdriver.pages.iaf.configapp.awards.awardprograms;
 
-import com.epam.tat.webdriver.pages.BasePage;
-import org.openqa.selenium.interactions.Actions;
+import com.epam.tat.webdriver.pages.iaf.IAFMainPage;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import ru.yandex.qatools.htmlelements.annotations.Name;
 import ru.yandex.qatools.htmlelements.element.HtmlElement;
@@ -9,7 +10,9 @@ import ru.yandex.qatools.htmlelements.element.Link;
 
 import java.util.List;
 
-public class AwardProgramsPage extends BasePage {
+import static com.epam.tat.webdriver.service.Waiters.waitElementClickable;
+
+public class AwardProgramsPage extends IAFMainPage {
 
     @Name("Default Program Link")
     @FindBy(xpath = "//a[contains(@href,'clientProgramId=19976')]")
@@ -28,8 +31,20 @@ public class AwardProgramsPage extends BasePage {
     private List<HtmlElement> awardProgramsTableColumnCells;
 
     @Name("Award program Column Values")
-    @FindBy(xpath = "//tr[contains(@id, 'yui')]//a[contains(@href,'ProgramId')]")
+    @FindBy(xpath = "//tbody[contains(@class,'yui-dt-data')]")
     private List<HtmlElement> awardProgramsTableColumnValues;
+
+    @Name("Award Levels Mappping Dialog Window (Add/Remove/Sort link)")
+    @FindBy(xpath = "//a[contains(@href,'showAwardTypesDialog')]")
+    private Link programAwardLevelsLink;
+
+    WebElement allRows = driver.findElement(By.xpath("//tbody[contains(@class,'yui-dt-data')]"));
+
+    public AwardTypesDialogPage clickAwardTypesDialog() {
+
+        waitElementClickable(driver, programAwardLevelsLink).click();
+        return new AwardTypesDialogPage();
+    }
 
     //tr[contains(@id, 'yui')]//a[contains(@href,'ProgramId=19976')]
 
@@ -56,9 +71,28 @@ public class AwardProgramsPage extends BasePage {
 //        return this;
 //    }
 
-    public AwardProgramsPage swapAwardPrograms() {
 
-        new Actions(driver).dragAndDrop(defaultAwardProgramLink.getWrappedElement(), serviceAnniversariesProgramLink.getWrappedElement()).build().perform();
-        return this;
-    }
+//    private WebElement getAwardProgramLine(String awardProgramNameText) {
+//        WebElement targetAwardProgramLine = null;
+//        for (HtmlElement awardProgramLine : awardProgramsTableRows) {
+//            WebElement awardProgramName = awardProgramLine.findElement(By.xpath("descendant::a[contains(@href,'ProgramId')]"));
+//            if (awardProgramName.getText().equals(awardProgramNameText)) {
+//                targetAwardProgramLine = awardProgramLine.getWrappedElement();
+//                break;
+//            }
+//        }
+//        return targetAwardProgramLine;
+//    }
+//
+//    public void swapAwardPrograms() {
+//        new Actions(driver).dragAndDrop(getAwardProgramLine("testclient5021 program"),allRows)
+////        new Actions(driver).dragAndDropBy(getAwardProgramLine("testclient5021 program"),120 )
+//                 .build().perform();
+//        try {
+//            Thread.sleep(10000);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+//
+//    }
 }

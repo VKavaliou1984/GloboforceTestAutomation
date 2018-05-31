@@ -9,7 +9,7 @@ import static com.epam.tat.webdriver.service.Waiters.waitElementClickable;
 public class ClientProgramsPage extends NominationPage {
 
     @Name("Default program button")
-    @FindBy(xpath = "//div[contains(@class,'np-award-program-default')]")
+    @FindBy(xpath = "//div[contains(@class,'np-awards-program-default')]")
     private Button defaultAwardProgramButton;
 
     public AwardReasonsPage chooseDefaultProgram() {

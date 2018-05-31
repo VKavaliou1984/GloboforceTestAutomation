@@ -1,6 +1,7 @@
 package com.epam.tat.webdriver.pages.iaf.configapp;
 
 import com.epam.tat.webdriver.pages.iaf.IAFMainPage;
+import com.epam.tat.webdriver.pages.iaf.configapp.awards.awardprograms.AwardProgramsPage;
 import org.openqa.selenium.support.FindBy;
 import ru.yandex.qatools.htmlelements.annotations.Name;
 import ru.yandex.qatools.htmlelements.element.Link;

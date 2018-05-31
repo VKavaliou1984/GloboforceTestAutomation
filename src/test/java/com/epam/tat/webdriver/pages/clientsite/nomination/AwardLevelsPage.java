@@ -9,7 +9,7 @@ import static com.epam.tat.webdriver.service.Waiters.waitElementClickable;
 public class AwardLevelsPage extends NominationPage {
 
     @Name("Award level button")
-    @FindBy(xpath = "//div[contains(@class,'np-award-value-wrapper')]")
+    @FindBy(xpath = "//div[contains(@class,'np-awards-value-wrapper')]")
     private Button awardLevelsButton;
 
     public AwardDetailsPage chooseAwardLevel() {

@@ -14,7 +14,7 @@ public class AwardReasonsComparisonTest extends BaseTest {
 
     private static final String RECIPIENT = "Helen HR_Manager";
 
-    @Test(description = "Compare award reasons description values Test")
+    @Test(description = "Compare awards reasons description values Test")
     public void createNomination() {
         new LoginPage().
                 open(SERVER, CLIENT_NAME)
