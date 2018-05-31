@@ -13,10 +13,6 @@ import static com.epam.tat.webdriver.service.Waiters.waitElementClickable;
 
 public class AwardTypesDialogPage extends IAFMainPage {
 
-    @Name("Unmapped Award Levels")
-    @FindBy(xpath = "//li[contains(@id,'true')]")
-    private List<WebElement> unmappedAwardLevels;
-
     @Name("Mapped Award Levels")
     @FindBy(xpath = "//li[contains(@id,'false')]")
     private List<HtmlElement> mappedAwardLevels;
@@ -27,7 +23,7 @@ public class AwardTypesDialogPage extends IAFMainPage {
 
     @Name("Save Award Mapping Changes Button")
     @FindBy(id = "save-button")
-    private HtmlElement savingAwardMappingChangesButton;
+    private HtmlElement AwardMappingSaveChangesButton;
 
 
     public HtmlElement findAwardLevel(String awardName) {
@@ -47,6 +43,6 @@ public class AwardTypesDialogPage extends IAFMainPage {
     }
 
     public void saveAwardMapping() {
-        waitElementClickable(driver, savingAwardMappingChangesButton).click();
+        waitElementClickable(driver, AwardMappingSaveChangesButton).click();
     }
 }
