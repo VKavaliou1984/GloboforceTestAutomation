@@ -1,6 +1,5 @@
-package com.epam.tat.webdriver.pages.nomination.process;
+package com.epam.tat.webdriver.pages.clientsite.nomination;
 
-import com.epam.tat.webdriver.pages.NominationPage;
 import com.epam.tat.webdriver.service.InputFieldFilling;
 import org.openqa.selenium.support.FindBy;
 import ru.yandex.qatools.htmlelements.annotations.Name;
@@ -24,7 +23,7 @@ public class AwardDetailsPage extends NominationPage {
     private TextInput messageForApprovalInput;
 
     @Name("Submit nomination button")
-    @FindBy(xpath = "//button[contains(@class,'js-np-send-award')]")
+    @FindBy(xpath = "//button[contains(@class,'js-np-send-awards')]")
     private Button submitNominationButton;
 
     private Boolean isAwardMessageInputDisplayed() {

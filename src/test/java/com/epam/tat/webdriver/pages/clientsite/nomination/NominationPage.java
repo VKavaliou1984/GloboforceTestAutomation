@@ -1,5 +1,7 @@
-package com.epam.tat.webdriver.pages;
+package com.epam.tat.webdriver.pages.clientsite.nomination;
 
+import com.epam.tat.webdriver.pages.BasePage;
+import com.epam.tat.webdriver.pages.clientsite.LandingPage;
 import org.openqa.selenium.support.FindBy;
 import ru.yandex.qatools.htmlelements.annotations.Name;
 import ru.yandex.qatools.htmlelements.element.Button;
@@ -8,7 +10,7 @@ import ru.yandex.qatools.htmlelements.element.HtmlElement;
 import static com.epam.tat.webdriver.service.Waiters.waitElementClickable;
 import static com.epam.tat.webdriver.service.Waiters.waitElementDisplayed;
 
-public abstract class NominationPage extends BasePage {
+public class NominationPage extends BasePage {
 
     @Name("In page nomination layer (nomination popUp)")
     @FindBy(id = "np_mainNotification")

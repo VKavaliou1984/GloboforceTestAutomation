@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Remove Award Level From Program" verbose="1">
+
+    <test name="Firefox">
+        <classes>
+            <class name="com.epam.tat.webdriver.scenarios.RemoveAwardFromProgramTest"/>
+            <parameter name="browser" value="firefox"></parameter>
+        </classes>
+    </test>
+    <test name="Chrome">
+        <classes>
+            <class name="com.epam.tat.webdriver.scenarios.RemoveAwardFromProgramTest"/>
+            <parameter name="browser" value="chrome"></parameter>
+        </classes>
+    </test>
+    <!--<test name="Edge">-->
+    <!--<classes>-->
+    <!--<class name="com.epam.tat.webdriver.scenarios.RemoveAwardFromProgramTest"/>-->
+    <!--<parameter name="browser" value="EDGE"></parameter>-->
+    <!--</classes>-->
+    <!--</test>-->
+</suite>

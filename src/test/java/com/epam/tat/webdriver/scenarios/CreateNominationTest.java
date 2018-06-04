@@ -1,9 +1,8 @@
 package com.epam.tat.webdriver.scenarios;
 
-import com.epam.tat.webdriver.pages.LoginPage;
-import com.epam.tat.webdriver.pages.blocks.HeaderBlock;
-import com.epam.tat.webdriver.pages.nomination.process.NominationConfirmationPage;
-import com.epam.tat.webdriver.service.driver.WebDriverInitializator;
+import com.epam.tat.webdriver.pages.clientsite.LoginPage;
+import com.epam.tat.webdriver.pages.clientsite.blocks.HeaderBlock;
+import com.epam.tat.webdriver.pages.clientsite.nomination.NominationConfirmationPage;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
@@ -36,10 +35,9 @@ public class CreateNominationTest extends BaseTest {
                 "Required elements ('close' button or 'nominate another colleague') for Nomination Confirmation Page are not found:");
     }
 
-    @AfterClass(alwaysRun = true)
-    public void closeDriver() {
+    @AfterClass
+    public void completeNominationProcess() {
         new NominationConfirmationPage().completeNominationProcess();
         new HeaderBlock().signOut();
-        WebDriverInitializator.getInstance().quitDriver();
     }
 }

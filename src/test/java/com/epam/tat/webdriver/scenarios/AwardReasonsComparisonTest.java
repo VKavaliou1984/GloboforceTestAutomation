@@ -1,8 +1,8 @@
 package com.epam.tat.webdriver.scenarios;
 
-import com.epam.tat.webdriver.pages.LoginPage;
-import com.epam.tat.webdriver.pages.blocks.HeaderBlock;
-import com.epam.tat.webdriver.pages.nomination.process.AwardReasonsPage;
+import com.epam.tat.webdriver.pages.clientsite.LoginPage;
+import com.epam.tat.webdriver.pages.clientsite.blocks.HeaderBlock;
+import com.epam.tat.webdriver.pages.clientsite.nomination.AwardReasonsPage;
 import com.epam.tat.webdriver.service.driver.WebDriverInitializator;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -14,7 +14,7 @@ public class AwardReasonsComparisonTest extends BaseTest {
 
     private static final String RECIPIENT = "Helen HR_Manager";
 
-    @Test(description = "Compare award reasons description values Test")
+    @Test(description = "Compare awards reasons description values Test")
     public void createNomination() {
         new LoginPage().
                 open(SERVER, CLIENT_NAME)

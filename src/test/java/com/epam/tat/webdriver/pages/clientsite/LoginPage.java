@@ -1,5 +1,6 @@
-package com.epam.tat.webdriver.pages;
+package com.epam.tat.webdriver.pages.clientsite;
 
+import com.epam.tat.webdriver.pages.BasePage;
 import com.epam.tat.webdriver.service.InputFieldFilling;
 import org.openqa.selenium.support.FindBy;
 import ru.yandex.qatools.htmlelements.annotations.Name;

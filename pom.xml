@@ -8,9 +8,9 @@
     <artifactId>webdriver</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <properties>
-        <suiteFile>${project.basedir}/src/test/resources/suites/PageObjectScenarios.xml</suiteFile>
-    </properties>
+    <!--<properties>-->
+    <!--<suiteFile>${project.basedir}/src/test/resources/suites/remoteDriver.xml</suiteFile>-->
+    <!--</properties>-->
 
     <dependencyManagement>
         <dependencies>
