@@ -10,7 +10,7 @@ import ru.yandex.qatools.htmlelements.element.TextInput;
 import static com.epam.tat.webdriver.service.Waiters.waitElementClickable;
 
 public class IAFLoginPage extends BasePage {
-    private static final String URL = "https://staging-sandbox0.corp.globoforce.com/iaf-config-app/manageAwardProgramsOpen?client=5021&menuid=6_1";
+    private static final String URL = "https://test-auto1-15.corp.globoforce.com/iaf-login-app/home";
 
     @Name("IAF Login input field")
     @FindBy(name = "j_username")
@@ -27,7 +27,7 @@ public class IAFLoginPage extends BasePage {
     public IAFLoginPage openIAFLoginPage() {
         driver.
                 navigate().
-                to(String.format(URL));
+                to(URL);
         return this;
     }
 

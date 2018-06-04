@@ -1,7 +1,6 @@
 package com.epam.tat.webdriver.pages.iaf.configapp.awards.awardprograms;
 
 import com.epam.tat.webdriver.pages.iaf.IAFMainPage;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import ru.yandex.qatools.htmlelements.annotations.Name;
@@ -23,8 +22,7 @@ public class AwardTypesDialogPage extends IAFMainPage {
 
     @Name("Save Award Mapping Changes Button")
     @FindBy(id = "save-button")
-    private HtmlElement AwardMappingSaveChangesButton;
-
+    private HtmlElement awardMappingSaveChangesButton;
 
     public HtmlElement findAwardLevel(String awardName) {
         HtmlElement targetAward = null;
@@ -38,11 +36,14 @@ public class AwardTypesDialogPage extends IAFMainPage {
     }
 
     public AwardTypesDialogPage unmapAwardFromProgram(String awardName) {
-        new Actions(driver).dragAndDrop(findAwardLevel(awardName).getWrappedElement(), ummappedAwardLevelDragList.getWrappedElement()).build().perform();
+        new Actions(driver)
+                .dragAndDrop(findAwardLevel(awardName).getWrappedElement(), ummappedAwardLevelDragList.getWrappedElement())
+                .build()
+                .perform();
         return new AwardTypesDialogPage();
     }
 
     public void saveAwardMapping() {
-        waitElementClickable(driver, AwardMappingSaveChangesButton).click();
+        waitElementClickable(driver, awardMappingSaveChangesButton).click();
     }
 }

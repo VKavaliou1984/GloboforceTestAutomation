@@ -9,7 +9,8 @@ import org.testng.annotations.Test;
 
 public class RemoveAwardFromProgramTest extends BaseTest {
 
-    private static final String IAF_USER_NAME = "bhkb.jshcw@gqfozpkzgb.kbk";
+    private static final String IAF_USER_NAME = "258355725794625";
+    private static final String IAF_USER_PASSWORD = "2583557257946251";
     private static final String MAPPING_AWARD_NAME = "Award2";
     private static final String AWARD_PROGRAM_NAME = "testclient5021 program";
 
@@ -18,7 +19,7 @@ public class RemoveAwardFromProgramTest extends BaseTest {
         new IAFLoginPage()
                 .openIAFLoginPage()
                 .enterUserName(IAF_USER_NAME)
-                .enterPassword(PASSWORD)
+                .enterPassword(IAF_USER_PASSWORD)
                 .clickIAFSignIn()
                 .clickConfigAppButton()
                 .clickChooseClientButton()

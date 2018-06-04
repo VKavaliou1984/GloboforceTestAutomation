@@ -11,11 +11,11 @@ import static com.epam.tat.webdriver.service.Waiters.waitElementClickable;
 public class ClientConfigurationMainPage extends IAFMainPage {
 
     @Name("Awards Link")
-    @FindBy(id = "ygtvlabelel39")
+    @FindBy(xpath = "//td/span[contains(text(), 'Awards')]")
     private Link awardsLink;
 
     @Name("Award Programs Link")
-    @FindBy(id = "ygtvlabelel40")
+    @FindBy(xpath = "//a[contains(text(), 'Award Programs')]")
     private Link awardProgramsLink;
 
     public ClientConfigurationMainPage clickAwardsButton() {
@@ -27,5 +27,4 @@ public class ClientConfigurationMainPage extends IAFMainPage {
         waitElementClickable(driver, awardProgramsLink).click();
         return new AwardProgramsPage();
     }
-
 }

@@ -21,7 +21,6 @@ public class AwardProgramsPage extends IAFMainPage {
                 waitElementClickable(driver, awardLevelsLinkForDefinedProgram).click();
             }
         }
-
         return new AwardTypesDialogPage();
     }
 }

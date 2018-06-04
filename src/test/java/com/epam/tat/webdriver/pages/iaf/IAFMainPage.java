@@ -24,7 +24,6 @@ public class IAFMainPage extends BasePage {
     @FindBy(xpath = "//a[contains(@href,'logout')]")
     private Button iafSignOutButton;
 
-
     public ConfigAppMainPage clickConfigAppButton() {
         new Actions(driver).moveToElement(otherApplicationsLink
                 .getWrappedElement())

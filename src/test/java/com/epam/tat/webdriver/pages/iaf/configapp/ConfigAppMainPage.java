@@ -17,5 +17,4 @@ public class ConfigAppMainPage extends IAFMainPage {
         waitElementClickable(driver, testClient5021ChooseLink).click();
         return new ClientConfigurationMainPage();
     }
-
 }
