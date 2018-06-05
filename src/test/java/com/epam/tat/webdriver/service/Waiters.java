@@ -23,4 +23,10 @@ public class Waiters {
                 .pollingEvery(Duration.ofSeconds(1))
                 .until(ExpectedConditions.visibilityOf(webElement));
     }
+
+    public static Boolean waitElementInvisible(WebDriver driver, WebElement webElement) {
+        return new WebDriverWait(driver, 10)
+                .pollingEvery(Duration.ofSeconds(1))
+                .until(ExpectedConditions.invisibilityOf(webElement));
+    }
 }

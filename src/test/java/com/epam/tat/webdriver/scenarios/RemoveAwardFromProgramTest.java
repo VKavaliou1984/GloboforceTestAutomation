@@ -27,11 +27,21 @@ public class RemoveAwardFromProgramTest extends BaseTest {
                 .clickAwardProgramsButton()
                 .clickAwardTypesDialog(AWARD_PROGRAM_NAME)
                 .unmapAwardFromProgram(MAPPING_AWARD_NAME)
-                .saveAwardMapping();
-        Assert.assertNotEquals(MAPPING_AWARD_NAME, new AwardTypesDialogPage().findAwardLevel(MAPPING_AWARD_NAME));
+                .saveAwardMapping()
+                .waitUntilChangesSaved()
+                .clickAwardTypesDialog(AWARD_PROGRAM_NAME);
+        Assert.assertNull(new AwardTypesDialogPage().findAwardLevel(MAPPING_AWARD_NAME, true));
     }
 
     @AfterClass
+    public void cleanUp() {
+        new AwardTypesDialogPage()
+                .mapAwardToProgram(MAPPING_AWARD_NAME)
+                .saveAwardMapping()
+                .waitUntilChangesSaved();
+    }
+
+    @AfterClass(dependsOnMethods = "cleanUp")
     public void signOutFromIAF() {
         new AwardProgramsPage().clickSignOutButton();
     }

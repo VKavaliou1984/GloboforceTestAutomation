@@ -8,27 +8,43 @@ import ru.yandex.qatools.htmlelements.element.HtmlElement;
 
 import java.util.List;
 
-import static com.epam.tat.webdriver.service.Waiters.waitElementClickable;
+import static com.epam.tat.webdriver.service.Waiters.*;
 
 public class AwardTypesDialogPage extends IAFMainPage {
 
     @Name("Mapped Award Levels")
-    @FindBy(xpath = "//li[contains(@id,'false')]")
+    @FindBy(xpath = "//*[@id='current_items']/li")
     private List<HtmlElement> mappedAwardLevels;
 
-    @Name("Award Levels Mapped To The Award Program (Drag List")
+    @Name("Unmapped Award Levels List")
+    @FindBy(xpath = "//*[@id='all_items']/li")
+    private List<HtmlElement> unmappedAwardLevels;
+
+    @Name("Unmapped Award Levels Element")
     @FindBy(id = "all_items")
-    private HtmlElement ummappedAwardLevelDragList;
+    private HtmlElement unmappedAwardLevelsDragList;
+
+    @Name("Mapped Award Levels Element")
+    @FindBy(id = "current_items")
+    private HtmlElement mappedAwardLevelsDragList;
 
     @Name("Save Award Mapping Changes Button")
     @FindBy(id = "save-button")
     private HtmlElement awardMappingSaveChangesButton;
 
-    public HtmlElement findAwardLevel(String awardName) {
+    @Name("Progress Bar During Saving")
+    @FindBy(id = "wait_c")
+    private HtmlElement progressBar;
+
+    public HtmlElement findAwardLevel(String awardName, Boolean isAwardMapped) {
         HtmlElement targetAward = null;
-        for (HtmlElement mappedAwardLevel : mappedAwardLevels) {
-            if (mappedAwardLevel.getWrappedElement().getText().contains(awardName)) {
-                targetAward = mappedAwardLevel;
+        List<HtmlElement> awardList = null;
+        if (isAwardMapped) {
+            awardList = mappedAwardLevels;
+        } else awardList = unmappedAwardLevels;
+        for (HtmlElement award : awardList) {
+            if (award.getWrappedElement().getText().contains(awardName)) {
+                targetAward = award;
                 break;
             }
         }
@@ -37,13 +53,30 @@ public class AwardTypesDialogPage extends IAFMainPage {
 
     public AwardTypesDialogPage unmapAwardFromProgram(String awardName) {
         new Actions(driver)
-                .dragAndDrop(findAwardLevel(awardName).getWrappedElement(), ummappedAwardLevelDragList.getWrappedElement())
+                .dragAndDrop(findAwardLevel(awardName, true).getWrappedElement(), unmappedAwardLevelsDragList.getWrappedElement())
                 .build()
                 .perform();
-        return new AwardTypesDialogPage();
+        return this;
     }
 
-    public void saveAwardMapping() {
+    public AwardTypesDialogPage mapAwardToProgram(String awardName) {
+        waitElementDisplayed(driver, mappedAwardLevelsDragList);
+        new Actions(driver)
+                .dragAndDrop(findAwardLevel(awardName, false).getWrappedElement(),
+                        mappedAwardLevelsDragList.getWrappedElement())
+                .build()
+                .perform();
+        return this;
+    }
+
+    public AwardProgramsPage waitUntilChangesSaved() {
+        waitElementDisplayed(driver, progressBar);
+        waitElementInvisible(driver, progressBar);
+        return new AwardProgramsPage();
+    }
+
+    public AwardTypesDialogPage saveAwardMapping() {
         waitElementClickable(driver, awardMappingSaveChangesButton).click();
+        return this;
     }
 }
