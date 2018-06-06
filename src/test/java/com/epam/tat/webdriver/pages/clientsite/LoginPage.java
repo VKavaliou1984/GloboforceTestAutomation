@@ -1,13 +1,13 @@
 package com.epam.tat.webdriver.pages.clientsite;
 
 import com.epam.tat.webdriver.pages.BasePage;
-import com.epam.tat.webdriver.service.InputFieldFilling;
+import com.epam.tat.webdriver.utilities.InputFieldFilling;
 import org.openqa.selenium.support.FindBy;
 import ru.yandex.qatools.htmlelements.annotations.Name;
 import ru.yandex.qatools.htmlelements.element.Button;
 import ru.yandex.qatools.htmlelements.element.TextInput;
 
-import static com.epam.tat.webdriver.service.Waiters.waitElementClickable;
+import static com.epam.tat.webdriver.utilities.Waiters.waitElementClickable;
 
 public class LoginPage extends BasePage {
 

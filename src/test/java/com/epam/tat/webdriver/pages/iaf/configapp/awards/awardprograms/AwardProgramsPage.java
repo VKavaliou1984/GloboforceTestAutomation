@@ -7,7 +7,7 @@ import ru.yandex.qatools.htmlelements.element.Link;
 
 import java.util.List;
 
-import static com.epam.tat.webdriver.service.Waiters.waitElementClickable;
+import static com.epam.tat.webdriver.utilities.Waiters.waitElementClickable;
 
 public class AwardProgramsPage extends IAFMainPage {
 

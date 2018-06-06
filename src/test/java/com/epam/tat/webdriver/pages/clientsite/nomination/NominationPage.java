@@ -7,8 +7,8 @@ import ru.yandex.qatools.htmlelements.annotations.Name;
 import ru.yandex.qatools.htmlelements.element.Button;
 import ru.yandex.qatools.htmlelements.element.HtmlElement;
 
-import static com.epam.tat.webdriver.service.Waiters.waitElementClickable;
-import static com.epam.tat.webdriver.service.Waiters.waitElementDisplayed;
+import static com.epam.tat.webdriver.utilities.Waiters.waitElementClickable;
+import static com.epam.tat.webdriver.utilities.Waiters.waitElementDisplayed;
 
 public class NominationPage extends BasePage {
 

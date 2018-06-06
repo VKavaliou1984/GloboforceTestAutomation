@@ -1,14 +1,14 @@
 package com.epam.tat.webdriver.pages.iaf.configapp.awards.awardprograms;
 
 import com.epam.tat.webdriver.pages.iaf.IAFMainPage;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import ru.yandex.qatools.htmlelements.annotations.Name;
 import ru.yandex.qatools.htmlelements.element.HtmlElement;
 
 import java.util.List;
 
-import static com.epam.tat.webdriver.service.Waiters.*;
+import static com.epam.tat.webdriver.utilities.ActionsUtil.dragAndDrop;
+import static com.epam.tat.webdriver.utilities.Waiters.*;
 
 public class AwardTypesDialogPage extends IAFMainPage {
 
@@ -36,10 +36,10 @@ public class AwardTypesDialogPage extends IAFMainPage {
     @FindBy(id = "wait_c")
     private HtmlElement progressBar;
 
-    public HtmlElement findAwardLevel(String awardName, Boolean isAwardMapped) {
+    public HtmlElement findAwardLevel(String awardName, Boolean getMappedAwardLevels) {
         HtmlElement targetAward = null;
         List<HtmlElement> awardList = null;
-        if (isAwardMapped) {
+        if (getMappedAwardLevels) {
             awardList = mappedAwardLevels;
         } else awardList = unmappedAwardLevels;
         for (HtmlElement award : awardList) {
@@ -52,20 +52,16 @@ public class AwardTypesDialogPage extends IAFMainPage {
     }
 
     public AwardTypesDialogPage unmapAwardFromProgram(String awardName) {
-        new Actions(driver)
-                .dragAndDrop(findAwardLevel(awardName, true).getWrappedElement(), unmappedAwardLevelsDragList.getWrappedElement())
-                .build()
-                .perform();
+        waitElementDisplayed(driver, unmappedAwardLevelsDragList);
+        dragAndDrop(driver, findAwardLevel(awardName, true).getWrappedElement(),
+                unmappedAwardLevelsDragList.getWrappedElement());
         return this;
     }
 
     public AwardTypesDialogPage mapAwardToProgram(String awardName) {
         waitElementDisplayed(driver, mappedAwardLevelsDragList);
-        new Actions(driver)
-                .dragAndDrop(findAwardLevel(awardName, false).getWrappedElement(),
-                        mappedAwardLevelsDragList.getWrappedElement())
-                .build()
-                .perform();
+        dragAndDrop(driver, findAwardLevel(awardName, false).getWrappedElement(),
+                mappedAwardLevelsDragList.getWrappedElement());
         return this;
     }
 

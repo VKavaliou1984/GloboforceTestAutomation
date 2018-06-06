@@ -1,4 +1,4 @@
-package com.epam.tat.webdriver.service;
+package com.epam.tat.webdriver.utilities;
 
 public enum DriverType {
     LOCAL,

@@ -6,8 +6,8 @@ import ru.yandex.qatools.htmlelements.annotations.Name;
 import ru.yandex.qatools.htmlelements.element.Button;
 import ru.yandex.qatools.htmlelements.element.TextInput;
 
-import static com.epam.tat.webdriver.service.Waiters.waitElementClickable;
-import static com.epam.tat.webdriver.service.Waiters.waitElementDisplayed;
+import static com.epam.tat.webdriver.utilities.Waiters.waitElementClickable;
+import static com.epam.tat.webdriver.utilities.Waiters.waitElementDisplayed;
 
 public class NominationConfirmationPage extends NominationPage {
 

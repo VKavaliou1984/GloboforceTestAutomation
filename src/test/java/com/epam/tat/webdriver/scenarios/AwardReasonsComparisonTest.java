@@ -3,7 +3,7 @@ package com.epam.tat.webdriver.scenarios;
 import com.epam.tat.webdriver.pages.clientsite.LoginPage;
 import com.epam.tat.webdriver.pages.clientsite.blocks.HeaderBlock;
 import com.epam.tat.webdriver.pages.clientsite.nomination.AwardReasonsPage;
-import com.epam.tat.webdriver.service.driver.WebDriverInitializator;
+import com.epam.tat.webdriver.utilities.driver.WebDriverInitializator;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;

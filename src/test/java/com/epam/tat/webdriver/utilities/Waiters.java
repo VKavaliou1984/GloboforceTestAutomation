@@ -1,4 +1,4 @@
-package com.epam.tat.webdriver.service;
+package com.epam.tat.webdriver.utilities;
 
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
@@ -25,7 +25,7 @@ public class Waiters {
     }
 
     public static Boolean waitElementInvisible(WebDriver driver, WebElement webElement) {
-        return new WebDriverWait(driver, 10)
+        return new WebDriverWait(driver, 20)
                 .pollingEvery(Duration.ofSeconds(1))
                 .until(ExpectedConditions.invisibilityOf(webElement));
     }

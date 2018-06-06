@@ -1,9 +1,9 @@
-package com.epam.tat.webdriver.service;
+package com.epam.tat.webdriver.utilities;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import static com.epam.tat.webdriver.service.Waiters.waitElementDisplayed;
+import static com.epam.tat.webdriver.utilities.Waiters.waitElementDisplayed;
 
 public class InputFieldFilling {
     public static void fillInputField(WebDriver driver, WebElement webElement, String value) {

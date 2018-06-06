@@ -8,7 +8,7 @@ import ru.yandex.qatools.htmlelements.annotations.Name;
 import ru.yandex.qatools.htmlelements.element.Button;
 import ru.yandex.qatools.htmlelements.element.Link;
 
-import static com.epam.tat.webdriver.service.Waiters.waitElementClickable;
+import static com.epam.tat.webdriver.utilities.Waiters.waitElementClickable;
 
 public class IAFMainPage extends BasePage {
 
