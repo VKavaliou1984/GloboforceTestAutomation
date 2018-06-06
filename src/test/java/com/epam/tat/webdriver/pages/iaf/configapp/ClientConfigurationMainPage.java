@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import ru.yandex.qatools.htmlelements.annotations.Name;
 import ru.yandex.qatools.htmlelements.element.Link;
 
-import static com.epam.tat.webdriver.service.Waiters.waitElementClickable;
+import static com.epam.tat.webdriver.utilities.Waiters.waitElementClickable;
 
 public class ClientConfigurationMainPage extends IAFMainPage {
 

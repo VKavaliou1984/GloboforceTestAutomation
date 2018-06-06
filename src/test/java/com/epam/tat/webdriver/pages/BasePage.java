@@ -1,6 +1,6 @@
 package com.epam.tat.webdriver.pages;
 
-import com.epam.tat.webdriver.service.driver.WebDriverInitializator;
+import com.epam.tat.webdriver.utilities.driver.WebDriverInitializator;
 import org.openqa.selenium.WebDriver;
 import ru.yandex.qatools.htmlelements.loader.HtmlElementLoader;
 

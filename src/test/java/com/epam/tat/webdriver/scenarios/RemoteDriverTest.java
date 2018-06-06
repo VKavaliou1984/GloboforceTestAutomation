@@ -1,6 +1,6 @@
 package com.epam.tat.webdriver.scenarios;
 
-import com.epam.tat.webdriver.service.driver.WebDriverInitializator;
+import com.epam.tat.webdriver.utilities.driver.WebDriverInitializator;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

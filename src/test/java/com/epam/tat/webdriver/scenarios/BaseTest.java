@@ -1,6 +1,6 @@
 package com.epam.tat.webdriver.scenarios;
 
-import com.epam.tat.webdriver.service.driver.WebDriverInitializator;
+import com.epam.tat.webdriver.utilities.driver.WebDriverInitializator;
 import org.openqa.selenium.Platform;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;

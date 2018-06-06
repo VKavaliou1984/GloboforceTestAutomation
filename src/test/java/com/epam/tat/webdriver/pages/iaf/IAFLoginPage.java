@@ -1,15 +1,16 @@
 package com.epam.tat.webdriver.pages.iaf;
 
 import com.epam.tat.webdriver.pages.BasePage;
-import com.epam.tat.webdriver.service.InputFieldFilling;
+import com.epam.tat.webdriver.utilities.InputFieldFilling;
 import org.openqa.selenium.support.FindBy;
 import ru.yandex.qatools.htmlelements.annotations.Name;
 import ru.yandex.qatools.htmlelements.element.Button;
 import ru.yandex.qatools.htmlelements.element.TextInput;
 
-import static com.epam.tat.webdriver.service.Waiters.waitElementClickable;
+import static com.epam.tat.webdriver.utilities.Waiters.waitElementClickable;
 
 public class IAFLoginPage extends BasePage {
+
     private static final String URL = "https://test-auto1-15.corp.globoforce.com/iaf-login-app/home";
 
     @Name("IAF Login input field")
@@ -25,9 +26,7 @@ public class IAFLoginPage extends BasePage {
     private Button iafSignInButton;
 
     public IAFLoginPage openIAFLoginPage() {
-        driver.
-                navigate().
-                to(URL);
+        driver.navigate().to(URL);
         return this;
     }
 
