@@ -1,7 +1,7 @@
-package com.epam.tat.webdriver.pages.clientsite.blocks;
+package com.epam.tat.webdriver.pages.clientsites.blocks;
 
 import com.epam.tat.webdriver.pages.BasePage;
-import com.epam.tat.webdriver.pages.clientsite.LogOutPage;
+import com.epam.tat.webdriver.pages.clientsites.LogOutPage;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.support.FindBy;
 import ru.yandex.qatools.htmlelements.annotations.Name;

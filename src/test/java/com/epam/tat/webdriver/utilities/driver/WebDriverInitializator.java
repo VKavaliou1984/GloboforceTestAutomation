@@ -17,12 +17,12 @@ import static org.openqa.selenium.remote.BrowserType.*;
 
 public class WebDriverInitializator {
 
-    private WebDriver driver;
-    private static final int IMPLICIT_TIMEOUT = 5;
-    private static WebDriverInitializator webDriverInitializator = null;
-    private Platform platform;
     public static final String LOCAL = "local";
     public static final String REMOTE = "remote";
+    private static final int IMPLICIT_TIMEOUT = 5;
+    private static WebDriverInitializator webDriverInitializator = null;
+    private WebDriver driver;
+    private Platform platform;
 
     public static WebDriverInitializator getInstance() {
         if (webDriverInitializator == null) {

@@ -1,8 +1,9 @@
 package com.epam.tat.webdriver.scenarios;
 
-import com.epam.tat.webdriver.pages.clientsite.LoginPage;
-import com.epam.tat.webdriver.pages.clientsite.blocks.HeaderBlock;
-import com.epam.tat.webdriver.pages.clientsite.nomination.AwardReasonsPage;
+import com.epam.tat.webdriver.bo.UserBO;
+import com.epam.tat.webdriver.pages.clientsites.blocks.HeaderBlock;
+import com.epam.tat.webdriver.pages.clientsites.nomination.AwardReasonsPage;
+import com.epam.tat.webdriver.service.LoginClientSiteService;
 import com.epam.tat.webdriver.utilities.driver.WebDriverInitializator;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -12,15 +13,15 @@ import java.util.Arrays;
 
 public class AwardReasonsComparisonTest extends BaseTest {
 
+    private static final String CLIENT_NAME = "testclient5015";
+    private static final String USER_NAME = "adam_admin";
+    private static final String PASSWORD = "password1";
+    private static final String SERVER = "staging-web1.corp.globoforce.com"; //"psupport-web1.corp.globoforce.com"; //preprod-sandbox0.corp.globoforce.com //sandbox0.globoforce.com //psupport-sandbox0.corp.globoforce.com //psupport-web1.corp.globoforce.com
     private static final String RECIPIENT = "Helen HR_Manager";
 
     @Test(description = "Compare awards reasons description values Test")
     public void createNomination() {
-        new LoginPage().
-                open(SERVER, CLIENT_NAME)
-                .enterUserName(USER_NAME)
-                .enterPassword(PASSWORD)
-                .clickSignIn()
+        LoginClientSiteService.loginClientSite(new UserBO(USER_NAME, PASSWORD, CLIENT_NAME, SERVER))
                 .clickRecognizeButton()
                 .searchRecipient(RECIPIENT)
                 .clickNext()

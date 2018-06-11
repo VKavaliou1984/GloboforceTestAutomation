@@ -11,7 +11,7 @@ import static com.epam.tat.webdriver.utilities.Waiters.waitElementClickable;
 
 public class IAFLoginPage extends BasePage {
 
-    private static final String URL = "https://test-auto1-15.corp.globoforce.com/iaf-login-app/home";
+    private static final String URL = "https://staging-sandbox0.corp.globoforce.com/iaf-login-app/home";
 
     @Name("IAF Login input field")
     @FindBy(name = "j_username")

@@ -1,4 +1,4 @@
-package com.epam.tat.webdriver.pages.clientsite;
+package com.epam.tat.webdriver.pages.clientsites;
 
 import com.epam.tat.webdriver.pages.BasePage;
 import com.epam.tat.webdriver.utilities.InputFieldFilling;

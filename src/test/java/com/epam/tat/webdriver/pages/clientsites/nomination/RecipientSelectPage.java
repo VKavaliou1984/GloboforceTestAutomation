@@ -1,4 +1,4 @@
-package com.epam.tat.webdriver.pages.clientsite.nomination;
+package com.epam.tat.webdriver.pages.clientsites.nomination;
 
 import com.epam.tat.webdriver.utilities.InputFieldFilling;
 import org.openqa.selenium.By;
