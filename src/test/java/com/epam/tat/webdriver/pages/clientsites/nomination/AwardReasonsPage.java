@@ -1,4 +1,4 @@
-package com.epam.tat.webdriver.pages.clientsite.nomination;
+package com.epam.tat.webdriver.pages.clientsites.nomination;
 
 import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.WebElement;
@@ -15,11 +15,11 @@ import static com.epam.tat.webdriver.utilities.Waiters.waitElementClickable;
 public class AwardReasonsPage extends NominationPage {
 
     @Name("Award reason button")
-    @FindBy(xpath = "//div[contains(@class,'np-awards-reason-item')]")
+    @FindBy(xpath = "//div[contains(@class,'np-award-reason-item')]")
     private Button awardReasonButton;
 
     @Name("Award reason description button")
-    @FindBy(xpath = "//div[contains(@class,'np-awards-reason-description')]")
+    @FindBy(xpath = "//div[contains(@class,'np-award-reason-description')]")
     private List<HtmlElement> awardReasonDescriptionButtons;
 
     public AwardLevelsPage chooseAwardReason() {

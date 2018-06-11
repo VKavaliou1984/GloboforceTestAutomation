@@ -4,19 +4,19 @@
 
     <test name="Firefox">
         <classes>
-            <class name="com.epam.tat.webdriver.scenarios.RemoveAwardFromProgramTest"/>
+            <class name="com.epam.tat.webdriver.scenarios.iaf.configapp.RemoveAwardFromProgramTest"/>
             <parameter name="browser" value="firefox"></parameter>
         </classes>
     </test>
     <test name="Chrome">
         <classes>
-            <class name="com.epam.tat.webdriver.scenarios.RemoveAwardFromProgramTest"/>
+            <class name="com.epam.tat.webdriver.scenarios.iaf.configapp.RemoveAwardFromProgramTest"/>
             <parameter name="browser" value="chrome"></parameter>
         </classes>
     </test>
     <!--<test name="Edge">-->
     <!--<classes>-->
-    <!--<class name="com.epam.tat.webdriver.scenarios.RemoveAwardFromProgramTest"/>-->
+    <!--<class name="com.epam.tat.webdriver.scenarios.iaf.configapp.RemoveAwardFromProgramTest"/>-->
     <!--<parameter name="browser" value="EDGE"></parameter>-->
     <!--</classes>-->
     <!--</test>-->
