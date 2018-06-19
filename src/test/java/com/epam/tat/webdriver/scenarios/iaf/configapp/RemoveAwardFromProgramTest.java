@@ -1,9 +1,10 @@
 package com.epam.tat.webdriver.scenarios.iaf.configapp;
 
-import com.epam.tat.webdriver.pages.iaf.IAFLoginPage;
+import com.epam.tat.webdriver.bo.UserBO;
 import com.epam.tat.webdriver.pages.iaf.configapp.awards.awardprograms.AwardProgramsPage;
 import com.epam.tat.webdriver.pages.iaf.configapp.awards.awardprograms.AwardTypesDialogPage;
 import com.epam.tat.webdriver.scenarios.BaseTest;
+import com.epam.tat.webdriver.service.iaf.LoginIafService;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
@@ -17,11 +18,7 @@ public class RemoveAwardFromProgramTest extends BaseTest {
 
     @Test(description = "Unmapping (Removing) Award Level from Program Test")
     public void removeAwardLevel() {
-        new IAFLoginPage()
-                .openIAFLoginPage()
-                .enterUserName(IAF_USER_NAME)
-                .enterPassword(IAF_USER_PASSWORD)
-                .clickIAFSignIn()
+        LoginIafService.loginIaf((new UserBO.Builder(IAF_USER_NAME, IAF_USER_PASSWORD).build()))
                 .clickConfigAppButton()
                 .clickChooseClientButton()
                 .clickAwardsButton()

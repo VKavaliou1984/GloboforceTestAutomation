@@ -1,9 +1,10 @@
-package com.epam.tat.webdriver.scenarios;
+package com.epam.tat.webdriver.scenarios.clientsites;
 
 import com.epam.tat.webdriver.bo.UserBO;
 import com.epam.tat.webdriver.pages.clientsites.blocks.HeaderBlock;
 import com.epam.tat.webdriver.pages.clientsites.nomination.AwardReasonsPage;
-import com.epam.tat.webdriver.service.LoginClientSiteService;
+import com.epam.tat.webdriver.scenarios.BaseTest;
+import com.epam.tat.webdriver.service.clientsites.LoginClientSiteService;
 import com.epam.tat.webdriver.utilities.driver.WebDriverInitializator;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -21,7 +22,7 @@ public class AwardReasonsComparisonTest extends BaseTest {
 
     @Test(description = "Compare awards reasons description values Test")
     public void createNomination() {
-        LoginClientSiteService.loginClientSite(new UserBO(USER_NAME, PASSWORD, CLIENT_NAME, SERVER))
+        LoginClientSiteService.loginClientSite(new UserBO.Builder(USER_NAME, PASSWORD).enterClientName(CLIENT_NAME).enterServer(SERVER).build())
                 .clickRecognizeButton()
                 .searchRecipient(RECIPIENT)
                 .clickNext()
