@@ -1,4 +1,4 @@
-package com.epam.tat.webdriver.service;
+package com.epam.tat.webdriver.service.clientsites;
 
 import com.epam.tat.webdriver.bo.NominationBO;
 import com.epam.tat.webdriver.pages.clientsites.LandingPage;
@@ -11,8 +11,8 @@ public class NominationService {
                 .searchRecipient(nomination.getRecipient())
                 .clickNext()
                 .chooseDefaultProgram()
-                .chooseAwardReason()
-                .chooseAwardLevel()
+                .chooseAwardReason(nomination.getReason())
+                .chooseAwardLevel(nomination.getType())
                 .fillAwardTitle(nomination.getTitle())
                 .fillAwardMessage(nomination.getMessage())
                 .fillAwardApprovalMessage(nomination.getMessageForApprover())

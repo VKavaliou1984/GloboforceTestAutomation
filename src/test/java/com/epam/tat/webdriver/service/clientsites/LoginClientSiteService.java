@@ -1,4 +1,4 @@
-package com.epam.tat.webdriver.service;
+package com.epam.tat.webdriver.service.clientsites;
 
 import com.epam.tat.webdriver.bo.UserBO;
 import com.epam.tat.webdriver.pages.clientsites.LandingPage;

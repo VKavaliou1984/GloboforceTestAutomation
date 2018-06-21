@@ -4,7 +4,7 @@
 
     <test name="Compare award reasons description. Firefox">
         <classes>
-            <class name="com.epam.tat.webdriver.scenarios.AwardReasonsComparisonTest"/>
+            <class name="com.epam.tat.webdriver.scenarios.clientsites.AwardReasonsComparisonTest"/>
             <parameter name="browser" value="firefox"></parameter>
         </classes>
     </test>

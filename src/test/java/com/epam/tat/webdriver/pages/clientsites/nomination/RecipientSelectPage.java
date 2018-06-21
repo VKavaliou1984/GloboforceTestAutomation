@@ -37,7 +37,7 @@ public class RecipientSelectPage extends NominationPage {
         InputFieldFilling.fillInputField(driver, searchRecipientField, recipient);
         waitElementDisplayed(driver, searchResultsForInfoField);
         for (WebElement element : chooseRecipientButtons) {
-            if (element.findElement(By.xpath("//preceding::h4")).getAttribute("innerText").equals(recipient)) {
+            if (element.findElement(By.xpath("preceding::h4")).getAttribute("innerText").equals(recipient)) {
                 element.click();
                 break;
             }
