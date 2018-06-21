@@ -1,5 +1,6 @@
 package com.epam.tat.webdriver.pages.clientsites.nomination;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import ru.yandex.qatools.htmlelements.annotations.Name;
@@ -18,13 +19,13 @@ public class AwardLevelsPage extends NominationPage {
     private Button awardLevelsButton;
 
     @Name("Award level button array")
-    @FindBy(xpath = "//div[contains(@class,'np-award-value-wrapper')]//bdi")
+    @FindBy(xpath = "//div[contains(@class,'np-award-value-wrapper')]")
     private List<HtmlElement> awardLevelsButtons;
 
     public AwardDetailsPage chooseAwardLevel(String awardLevel) {
         waitElementDisplayed(driver, awardLevelsButton);
         for (WebElement element : awardLevelsButtons) {
-            if (element.getText().contains(awardLevel)) {
+            if (element.findElement(By.xpath("descendant::bdi")).getText().contains(awardLevel)) {
                 waitElementClickable(driver, element).click();
                 break;
             }

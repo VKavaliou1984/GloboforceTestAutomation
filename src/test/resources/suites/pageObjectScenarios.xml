@@ -4,13 +4,13 @@
 
     <test name="Create a nomination. Firefox">
         <classes>
-            <class name="com.epam.tat.webdriver.scenarios.clientsites.CreateNominationTest"/>
+            <class name="com.epam.tat.webdriver.scenarios.clientsites.CreateCustomNominationTest"/>
             <parameter name="browser" value="firefox"></parameter>
         </classes>
     </test>
     <test name="Create a nomination and compare award reasons description. Chrome">
         <classes>
-            <class name="com.epam.tat.webdriver.scenarios.clientsites.CreateNominationTest"/>
+            <class name="com.epam.tat.webdriver.scenarios.clientsites.CreateCustomNominationTest"/>
             <class name="com.epam.tat.webdriver.scenarios.clientsites.AwardReasonsComparisonTest"/>
             <parameter name="browser" value="chrome"></parameter>
         </classes>

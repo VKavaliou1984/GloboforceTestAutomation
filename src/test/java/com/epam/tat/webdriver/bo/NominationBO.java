@@ -14,6 +14,38 @@ public class NominationBO {
     private NominationBO() {
     }
 
+    public String getRecipient() {
+        return recipient;
+    }
+
+    public String getProgram() {
+        return program;
+    }
+
+    public String getReason() {
+        return reason;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public String getMessageForApprover() {
+        return messageForApprover;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public String getPrivacy() {
+        return privacy;
+    }
+
     public static class Builder {
 
         private String recipient;
@@ -68,37 +100,5 @@ public class NominationBO {
             nominationBO.privacy = this.privacy;
             return nominationBO;
         }
-    }
-
-    public String getRecipient() {
-        return recipient;
-    }
-
-    public String getProgram() {
-        return program;
-    }
-
-    public String getReason() {
-        return reason;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public String getMessage() {
-        return message;
-    }
-
-    public String getMessageForApprover() {
-        return messageForApprover;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public String getPrivacy() {
-        return privacy;
     }
 }

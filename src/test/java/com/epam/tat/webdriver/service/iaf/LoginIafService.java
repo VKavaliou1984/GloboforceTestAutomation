@@ -8,7 +8,7 @@ public class LoginIafService {
 
     public static IAFMainPage loginIaf(UserBO user) {
         new IAFLoginPage().
-                openIAFLoginPage()
+                openIAFLoginPage(user.getServer())
                 .enterUserName(user.getUserName())
                 .enterPassword(user.getPassword())
                 .clickIAFSignIn();
