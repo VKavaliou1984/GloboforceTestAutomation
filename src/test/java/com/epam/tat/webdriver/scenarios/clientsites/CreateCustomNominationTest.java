@@ -22,7 +22,9 @@ public class CreateCustomNominationTest extends BaseTest {
 
     @Test(description = "Create custom nomination Test")
     public void createNomination() {
+        logger.info("Signing in to the site");
         LoginClientSiteService.loginClientSite(new UserFactory().get5015User());
+        logger.info("Creating a custom nomination");
         NominationService.createNomination(new NominationBO.Builder(RECIPIENT, AWARD_TITLE, AWARD_MESSAGE)
                 .chooseAwardReason(AWARD_REASON)
                 .chooseAwardType(AWARD_LEVEL)

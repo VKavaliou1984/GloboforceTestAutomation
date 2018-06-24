@@ -27,15 +27,17 @@ public class AwardReasonsPage extends NominationPage {
 //    }
 
     public List<String> getAwardReasonsDescription() {
+        logger.info("Getting award reason description list");
         List<String> awardReasonsDescriptionValues = new ArrayList<>();
         for (WebElement element : awardReasonDescriptionButtons) {
             awardReasonsDescriptionValues.add(StringUtils.deleteWhitespace(element.getAttribute("innerText")));
         }
-        System.out.println(awardReasonsDescriptionValues.toString());
+        logger.info("Award reasons: " + awardReasonsDescriptionValues.toString());
         return awardReasonsDescriptionValues;
     }
 
     public AwardLevelsPage chooseAwardReason(String awardReason) {
+        logger.info("Choosing award reason");
         for (WebElement element : awardReasonDescriptionButtons) {
             if (element.getAttribute("innerText").contains(awardReason)) {
                 waitElementClickable(driver, element).click();

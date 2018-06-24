@@ -14,6 +14,7 @@ public class ConfigAppMainPage extends IAFMainPage {
     private Link testClient5021ChooseLink;
 
     public ClientConfigurationMainPage clickChooseClientButton() {
+        logger.info("Choosing a client");
         waitElementClickable(driver, testClient5021ChooseLink).click();
         return new ClientConfigurationMainPage();
     }

@@ -23,6 +23,7 @@ public class AwardLevelsPage extends NominationPage {
     private List<HtmlElement> awardLevelsButtons;
 
     public AwardDetailsPage chooseAwardLevel(String awardLevel) {
+        logger.info("Choosing award level");
         waitElementDisplayed(driver, awardLevelsButton);
         for (WebElement element : awardLevelsButtons) {
             if (element.findElement(By.xpath("descendant::bdi")).getText().contains(awardLevel)) {

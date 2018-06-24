@@ -52,6 +52,7 @@ public class AwardTypesDialogPage extends IAFMainPage {
     }
 
     public AwardTypesDialogPage unmapAwardFromProgram(String awardName) {
+        logger.info("Unmapping award from program");
         waitElementDisplayed(driver, unmappedAwardLevelsDragList);
         dragAndDrop(driver, findAwardLevel(awardName, true).getWrappedElement(),
                 unmappedAwardLevelsDragList.getWrappedElement());
@@ -59,6 +60,7 @@ public class AwardTypesDialogPage extends IAFMainPage {
     }
 
     public AwardTypesDialogPage mapAwardToProgram(String awardName) {
+        logger.info("Mapping award to program");
         waitElementDisplayed(driver, mappedAwardLevelsDragList);
         dragAndDrop(driver, findAwardLevel(awardName, false).getWrappedElement(),
                 mappedAwardLevelsDragList.getWrappedElement());
@@ -66,12 +68,14 @@ public class AwardTypesDialogPage extends IAFMainPage {
     }
 
     public AwardProgramsPage waitUntilChangesSaved() {
+        logger.info("Waiting until progress bar is disappeared after changes");
         waitElementDisplayed(driver, progressBar);
         waitElementInvisible(driver, progressBar);
         return new AwardProgramsPage();
     }
 
     public AwardTypesDialogPage saveAwardMapping() {
+        logger.info("Confirming (saving) mapping changes");
         waitElementClickable(driver, awardMappingSaveChangesButton).click();
         return this;
     }

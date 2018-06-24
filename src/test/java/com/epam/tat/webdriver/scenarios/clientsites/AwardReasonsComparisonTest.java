@@ -18,6 +18,7 @@ public class AwardReasonsComparisonTest extends BaseTest {
 
     @Test(description = "Compare awards reasons description values Test")
     public void createNomination() {
+        logger.info("Comparing awards reasons description");
         LoginClientSiteService.loginClientSite(new UserFactory().get5015User())
                 .clickRecognizeButton()
                 .searchRecipient(RECIPIENT)

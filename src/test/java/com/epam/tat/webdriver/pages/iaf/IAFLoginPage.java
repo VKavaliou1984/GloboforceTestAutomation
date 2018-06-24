@@ -26,21 +26,25 @@ public class IAFLoginPage extends BasePage {
     private Button iafSignInButton;
 
     public IAFLoginPage openIAFLoginPage(String server) {
+        logger.info("Opening IAF Login page");
         driver.navigate().to(String.format(URL, server));
         return this;
     }
 
     public IAFLoginPage enterUserName(String userName) {
+        logger.info("Filling user name");
         InputFieldFilling.fillInputField(driver, iafUserNameInput, userName);
         return this;
     }
 
     public IAFLoginPage enterPassword(String password) {
+        logger.info("Filling password");
         InputFieldFilling.fillInputField(driver, iafPasswordInput, password);
         return this;
     }
 
     public IAFMainPage clickIAFSignIn() {
+        logger.info("Clicking Sign In button");
         waitElementClickable(driver, iafSignInButton).click();
         return new IAFMainPage();
     }
