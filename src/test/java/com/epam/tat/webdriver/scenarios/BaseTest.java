@@ -1,18 +1,17 @@
 package com.epam.tat.webdriver.scenarios;
 
+import com.epam.tat.webdriver.utilities.CustomListener;
 import com.epam.tat.webdriver.utilities.driver.WebDriverInitializator;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.Platform;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Optional;
-import org.testng.annotations.Parameters;
+import org.testng.annotations.*;
 
 import java.net.MalformedURLException;
 
 import static com.epam.tat.webdriver.utilities.driver.WebDriverInitializator.LOCAL;
 import static org.openqa.selenium.remote.BrowserType.CHROME;
 
+@Listeners(CustomListener.class)
 public abstract class BaseTest {
 
     protected Logger logger = Logger.getLogger(getClass());
