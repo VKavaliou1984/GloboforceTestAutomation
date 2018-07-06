@@ -21,6 +21,7 @@ public class LandingPage extends BasePage {
     private HtmlElement inPageNominationLayer;
 
     public RecipientSelectPage clickRecognizeButton() {
+        logger.info("Initiating nomination process (clicking Recognize button)");
         waitElementClickable(driver, recognizeButton).click();
         waitElementDisplayed(driver, inPageNominationLayer);
         return new RecipientSelectPage();

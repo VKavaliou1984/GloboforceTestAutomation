@@ -16,6 +16,7 @@ public class AwardProgramsPage extends IAFMainPage {
     private List<Link> programAwardLevelsLinks;
 
     public AwardTypesDialogPage clickAwardTypesDialog(String awardProgramName) {
+        logger.info("Calling award levels mapping dialog window");
         for (Link awardLevelsLinkForDefinedProgram : programAwardLevelsLinks) {
             if (awardLevelsLinkForDefinedProgram.getWrappedElement().getAttribute("href").contains(awardProgramName)) {
                 waitElementClickable(driver, awardLevelsLinkForDefinedProgram).click();

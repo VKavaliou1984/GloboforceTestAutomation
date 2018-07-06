@@ -1,6 +1,7 @@
 package com.epam.tat.webdriver.scenarios;
 
 import com.epam.tat.webdriver.utilities.driver.WebDriverInitializator;
+import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

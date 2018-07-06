@@ -16,6 +16,7 @@ public class HeaderBlock extends BasePage {
     private Button signOutButton;
 
     public LogOutPage signOut() {
+        logger.info("Clicking Sign Out button");
         for (int i = 0; i < 3; i++) {
             try {
                 clickSignOutButton();
