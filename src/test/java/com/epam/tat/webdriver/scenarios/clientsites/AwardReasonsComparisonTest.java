@@ -25,7 +25,7 @@ public class AwardReasonsComparisonTest extends BaseTest {
                 .clickNext()
                 .chooseDefaultProgram();
         Assert.assertEquals(new AwardReasonsPage().getAwardReasonsDescription(),
-                Arrays.asList("REASON1", "REASON2", "REASON3", "REASON4", "REASON5", "REASON6"),
+                Arrays.asList("REASON121", "REASON2", "REASON3", "REASON4", "REASON5", "REASON6"),
                 "Award reasons descriptions aren't equal requirements:");
     }
 

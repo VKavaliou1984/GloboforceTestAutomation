@@ -1,9 +1,11 @@
 package com.epam.tat.webdriver.scenarios;
 
 import com.epam.tat.webdriver.utilities.CustomListener;
+import com.epam.tat.webdriver.utilities.ScreenshotsUtil;
 import com.epam.tat.webdriver.utilities.driver.WebDriverInitializator;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.Platform;
+import org.testng.ITestResult;
 import org.testng.annotations.*;
 
 import java.net.MalformedURLException;
@@ -23,6 +25,11 @@ public abstract class BaseTest {
         System.out.println("Browser in use: ".concat(browser));
         WebDriverInitializator.getInstance().setPlatform(platform);
         WebDriverInitializator.getInstance().startDriver(browser, driverType);
+    }
+
+    @AfterMethod
+    public void takeScreenshot(ITestResult result) {
+        ScreenshotsUtil.captureScreenshot(WebDriverInitializator.getInstance().getDriver(), result);
     }
 
     @AfterTest(alwaysRun = true)

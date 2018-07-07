@@ -2,7 +2,9 @@ package com.epam.tat.webdriver.pages.iaf;
 
 import com.epam.tat.webdriver.pages.BasePage;
 import com.epam.tat.webdriver.utilities.InputFieldFilling;
+import com.epam.tat.webdriver.utilities.ScreenshotsUtil;
 import org.openqa.selenium.support.FindBy;
+import org.testng.ITestResult;
 import ru.yandex.qatools.htmlelements.annotations.Name;
 import ru.yandex.qatools.htmlelements.element.Button;
 import ru.yandex.qatools.htmlelements.element.TextInput;
@@ -41,6 +43,10 @@ public class IAFLoginPage extends BasePage {
         logger.info("Filling password");
         InputFieldFilling.fillInputField(driver, iafPasswordInput, password);
         return this;
+    }
+
+    public void takeScreenshot(ITestResult result) {
+        ScreenshotsUtil.captureScreenshot(driver, result);
     }
 
     public IAFMainPage clickIAFSignIn() {

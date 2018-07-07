@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
 public class CreateCustomNominationTest extends BaseTest {
 
     private static final String RECIPIENT = "Helen HR_Manager";
-    private static final String AWARD_REASON = "REASON3";
+    private static final String AWARD_REASON = "REASON2";
     private static final String AWARD_LEVEL = "Award5";
     private static final String AWARD_TITLE = "Auto_test_vk_award_test_title";
     private static final String AWARD_MESSAGE = "Auto_test_vk_award_test_message";

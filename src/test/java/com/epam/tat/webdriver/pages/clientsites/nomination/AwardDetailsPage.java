@@ -27,6 +27,7 @@ public class AwardDetailsPage extends NominationPage {
     private Button submitNominationButton;
 
     private Boolean isAwardMessageInputDisplayed() {
+        logger.info("Check whether award message for approver is displayed");
         try {
             messageForApprovalInput.isDisplayed();
             return true;

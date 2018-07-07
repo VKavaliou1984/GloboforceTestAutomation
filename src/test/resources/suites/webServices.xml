@@ -1,0 +1,30 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Web Services. Rest Assured. Unirest" verbose="1">
+
+    <test name="Rest Assured Correct State Test">
+        <classes>
+            <class name="com.epam.tat.webdriver.scenarios.webservices.RestAssuredCorrectStateTest"/>
+            <parameter name="browser" value="firefox"></parameter>
+        </classes>
+    </test>
+    <test name="Rest Assured Incorrect State Test">
+        <classes>
+            <class name="com.epam.tat.webdriver.scenarios.webservices.RestAssuredIncorrectStateTest"/>
+            <parameter name="browser" value="firefox"></parameter>
+        </classes>
+    </test>
+    <test name="Unirest Correct State Test">
+        <classes>
+            <class name="com.epam.tat.webdriver.scenarios.webservices.UnirestCorrectStateTest"/>
+            <parameter name="browser" value="firefox"></parameter>
+        </classes>
+    </test>
+    <test name="Unirest Incorrect State Test">
+        <classes>
+            <class name="com.epam.tat.webdriver.scenarios.webservices.UnirestIncorrectStateTest"/>
+            <parameter name="browser" value="firefox"></parameter>
+        </classes>
+    </test>
+
+</suite>
