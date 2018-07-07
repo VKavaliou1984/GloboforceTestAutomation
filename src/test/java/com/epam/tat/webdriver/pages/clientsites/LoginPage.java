@@ -26,6 +26,7 @@ public class LoginPage extends BasePage {
     private Button signInButton;
 
     public LoginPage open(String server, String clientName) {
+        logger.info("Opening client site");
         driver.
                 navigate().
                 to(String.format(URL, server, clientName));
@@ -33,16 +34,19 @@ public class LoginPage extends BasePage {
     }
 
     public LoginPage enterUserName(String userName) {
+        logger.info("Filling user name");
         InputFieldFilling.fillInputField(driver, userNameInput, userName);
         return this;
     }
 
     public LoginPage enterPassword(String password) {
+        logger.info("Filling password");
         InputFieldFilling.fillInputField(driver, passwordInput, password);
         return this;
     }
 
     public LandingPage clickSignIn() {
+        logger.info("Clicking Sign In button");
         waitElementClickable(driver, signInButton).click();
         return new LandingPage();
     }

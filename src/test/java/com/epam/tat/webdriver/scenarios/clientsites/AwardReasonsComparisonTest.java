@@ -18,13 +18,14 @@ public class AwardReasonsComparisonTest extends BaseTest {
 
     @Test(description = "Compare awards reasons description values Test")
     public void createNomination() {
+        logger.info("Comparing awards reasons description");
         LoginClientSiteService.loginClientSite(new UserFactory().get5015User())
                 .clickRecognizeButton()
                 .searchRecipient(RECIPIENT)
                 .clickNext()
                 .chooseDefaultProgram();
         Assert.assertEquals(new AwardReasonsPage().getAwardReasonsDescription(),
-                Arrays.asList("REASON1", "REASON2", "REASON3", "REASON4", "REASON5", "REASON6"),
+                Arrays.asList("REASON121", "REASON2", "REASON3", "REASON4", "REASON5", "REASON6"),
                 "Award reasons descriptions aren't equal requirements:");
     }
 

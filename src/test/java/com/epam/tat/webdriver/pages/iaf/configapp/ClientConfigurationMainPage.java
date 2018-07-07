@@ -19,11 +19,13 @@ public class ClientConfigurationMainPage extends IAFMainPage {
     private Link awardProgramsLink;
 
     public ClientConfigurationMainPage clickAwardsButton() {
+        logger.info("Clicking Awards link");
         waitElementClickable(driver, awardsLink).click();
         return this;
     }
 
     public AwardProgramsPage clickAwardProgramsButton() {
+        logger.info("Clicking Award Programs link");
         waitElementClickable(driver, awardProgramsLink).click();
         return new AwardProgramsPage();
     }

@@ -13,6 +13,7 @@ public class ClientProgramsPage extends NominationPage {
     private Button defaultAwardProgramButton;
 
     public AwardReasonsPage chooseDefaultProgram() {
+        logger.info("Choosing default award program");
         waitElementClickable(driver, defaultAwardProgramButton).click();
         return new AwardReasonsPage();
     }

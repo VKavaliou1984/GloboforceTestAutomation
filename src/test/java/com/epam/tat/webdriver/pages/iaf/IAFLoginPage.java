@@ -2,7 +2,9 @@ package com.epam.tat.webdriver.pages.iaf;
 
 import com.epam.tat.webdriver.pages.BasePage;
 import com.epam.tat.webdriver.utilities.InputFieldFilling;
+import com.epam.tat.webdriver.utilities.ScreenshotsUtil;
 import org.openqa.selenium.support.FindBy;
+import org.testng.ITestResult;
 import ru.yandex.qatools.htmlelements.annotations.Name;
 import ru.yandex.qatools.htmlelements.element.Button;
 import ru.yandex.qatools.htmlelements.element.TextInput;
@@ -26,21 +28,29 @@ public class IAFLoginPage extends BasePage {
     private Button iafSignInButton;
 
     public IAFLoginPage openIAFLoginPage(String server) {
+        logger.info("Opening IAF Login page");
         driver.navigate().to(String.format(URL, server));
         return this;
     }
 
     public IAFLoginPage enterUserName(String userName) {
+        logger.info("Filling user name");
         InputFieldFilling.fillInputField(driver, iafUserNameInput, userName);
         return this;
     }
 
     public IAFLoginPage enterPassword(String password) {
+        logger.info("Filling password");
         InputFieldFilling.fillInputField(driver, iafPasswordInput, password);
         return this;
     }
 
+    public void takeScreenshot(ITestResult result) {
+        ScreenshotsUtil.captureScreenshot(driver, result);
+    }
+
     public IAFMainPage clickIAFSignIn() {
+        logger.info("Clicking Sign In button");
         waitElementClickable(driver, iafSignInButton).click();
         return new IAFMainPage();
     }
