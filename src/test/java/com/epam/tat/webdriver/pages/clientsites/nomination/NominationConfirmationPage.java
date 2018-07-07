@@ -24,6 +24,7 @@ public class NominationConfirmationPage extends NominationPage {
     private Button signOutButton;
 
     public LandingPage completeNominationProcess() {
+        logger.info("Completing nomination process");
         waitElementClickable(driver, completeNominationButton).click();
         waitElementDisplayed(driver, signOutButton);
         return new LandingPage();

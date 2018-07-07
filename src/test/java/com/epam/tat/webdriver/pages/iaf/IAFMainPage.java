@@ -12,7 +12,7 @@ import static com.epam.tat.webdriver.utilities.Waiters.waitElementClickable;
 
 public class IAFMainPage extends BasePage {
 
-    @Name("Config app Link")
+    @Name("Config App Link")
     @FindBy(xpath = "//a[@href='/iaf-config-app/']")
     private Link configAppLink;
 
@@ -25,6 +25,7 @@ public class IAFMainPage extends BasePage {
     private Button iafSignOutButton;
 
     public ConfigAppMainPage clickConfigAppButton() {
+        logger.info("Clicking Config App link");
         new Actions(driver).moveToElement(otherApplicationsLink
                 .getWrappedElement())
                 .moveToElement(configAppLink.getWrappedElement())
@@ -35,6 +36,7 @@ public class IAFMainPage extends BasePage {
     }
 
     public void clickSignOutButton() {
+        logger.info("Clicking Sign Out button");
         waitElementClickable(driver, iafSignOutButton).click();
     }
 }

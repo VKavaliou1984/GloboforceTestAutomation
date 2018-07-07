@@ -31,6 +31,9 @@ public class WebDriverInitializator {
         return webDriverInitializator;
     }
 
+    private WebDriverInitializator() {
+    }
+
     public Platform getPlatform() {
         return platform;
     }

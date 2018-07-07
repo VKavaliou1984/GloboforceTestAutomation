@@ -30,6 +30,7 @@ public class NominationPage extends BasePage {
     }
 
     public LandingPage closeNominationProcess() {
+        logger.info("Closing nomination pop-up window");
         waitElementClickable(driver, closeNominationProcessButton).click();
         return new LandingPage();
     }

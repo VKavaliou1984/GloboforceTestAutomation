@@ -36,23 +36,27 @@ public class AwardDetailsPage extends NominationPage {
     }
 
     public AwardDetailsPage fillAwardTitle(String awardTitle) {
+        logger.info("Filling award title");
         InputFieldFilling.fillInputField(driver, awardTitleInput, awardTitle);
         return this;
     }
 
     public AwardDetailsPage fillAwardMessage(String awardMessage) {
+        logger.info("Filling award message");
         InputFieldFilling.fillInputField(driver, awardMessageInput, awardMessage);
         return this;
     }
 
     public AwardDetailsPage fillAwardApprovalMessage(String awardApprovalMessage) {
         if (isAwardMessageInputDisplayed()) {
+            logger.info("Filling award message for approver");
             InputFieldFilling.fillInputField(driver, messageForApprovalInput, awardApprovalMessage);
         }
         return this;
     }
 
     public NominationConfirmationPage submitNomination() {
+        logger.info("Submitting a nomination");
         waitElementClickable(driver, submitNominationButton).click();
         return new NominationConfirmationPage();
     }

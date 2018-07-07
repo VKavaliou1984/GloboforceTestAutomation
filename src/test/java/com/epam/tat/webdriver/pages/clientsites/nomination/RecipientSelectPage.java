@@ -34,6 +34,7 @@ public class RecipientSelectPage extends NominationPage {
     private Button nextButton;
 
     public RecipientSelectPage searchRecipient(String recipient) {
+        logger.info("Searching a recipient");
         InputFieldFilling.fillInputField(driver, searchRecipientField, recipient);
         waitElementDisplayed(driver, searchResultsForInfoField);
         for (WebElement element : chooseRecipientButtons) {
@@ -46,6 +47,7 @@ public class RecipientSelectPage extends NominationPage {
     }
 
     public ClientProgramsPage clickNext() {
+        logger.info("Clicking Next button (moving to the next step) after adding a recipient");
         waitElementClickable(driver, nextButton).click();
         return new ClientProgramsPage();
     }
