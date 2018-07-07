@@ -4,7 +4,6 @@ import com.epam.tat.webdriver.service.webservices.UnirestGetResponse;
 import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.JsonNode;
 import com.mashape.unirest.http.exceptions.UnirestException;
-import org.json.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
